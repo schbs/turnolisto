@@ -1,0 +1,602 @@
+[
+  {
+    "id": "tur-025",
+    "pacienteId": "pac-020",
+    "profesionalId": "prof-ibanez",
+    "prestacionId": "ortodoncia",
+    "inicio": "2026-10-26T15:00:00.000Z",
+    "fin": "2026-10-26T15:30:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-006",
+    "pacienteId": "pac-009",
+    "profesionalId": "prof-ferreyra",
+    "prestacionId": "limpieza",
+    "inicio": "2026-10-26T17:00:00.000Z",
+    "fin": "2026-10-26T17:45:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-010",
+    "pacienteId": "pac-032",
+    "profesionalId": "prof-ibanez",
+    "prestacionId": "limpieza",
+    "inicio": "2026-10-26T19:00:00.000Z",
+    "fin": "2026-10-26T19:45:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-047",
+    "pacienteId": "pac-031",
+    "profesionalId": "prof-ibanez",
+    "prestacionId": "limpieza",
+    "inicio": "2026-10-27T14:30:00.000Z",
+    "fin": "2026-10-27T15:15:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-036",
+    "pacienteId": "pac-012",
+    "profesionalId": "prof-ibanez",
+    "prestacionId": "ortodoncia",
+    "inicio": "2026-10-27T16:00:00.000Z",
+    "fin": "2026-10-27T16:30:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-059",
+    "pacienteId": "pac-001",
+    "profesionalId": "prof-ferreyra",
+    "prestacionId": "arreglo",
+    "inicio": "2026-10-27T16:45:00.000Z",
+    "fin": "2026-10-27T17:30:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-044",
+    "pacienteId": "pac-038",
+    "profesionalId": "prof-ibanez",
+    "prestacionId": "limpieza",
+    "inicio": "2026-10-27T18:30:00.000Z",
+    "fin": "2026-10-27T19:15:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-060",
+    "pacienteId": "pac-012",
+    "profesionalId": "prof-quintana",
+    "prestacionId": "extraccion",
+    "inicio": "2026-10-28T13:45:00.000Z",
+    "fin": "2026-10-28T14:45:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-048",
+    "pacienteId": "pac-016",
+    "profesionalId": "prof-ibanez",
+    "prestacionId": "limpieza",
+    "inicio": "2026-10-28T17:45:00.000Z",
+    "fin": "2026-10-28T18:30:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-051",
+    "pacienteId": "pac-032",
+    "profesionalId": "prof-quintana",
+    "prestacionId": "arreglo",
+    "inicio": "2026-10-28T19:15:00.000Z",
+    "fin": "2026-10-28T20:00:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-014",
+    "pacienteId": "pac-010",
+    "profesionalId": "prof-quintana",
+    "prestacionId": "conducto",
+    "inicio": "2026-10-29T13:00:00.000Z",
+    "fin": "2026-10-29T14:30:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-046",
+    "pacienteId": "pac-034",
+    "profesionalId": "prof-ibanez",
+    "prestacionId": "limpieza",
+    "inicio": "2026-10-29T13:00:00.000Z",
+    "fin": "2026-10-29T13:45:00.000Z",
+    "estado": "ausente",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-027",
+    "pacienteId": "pac-003",
+    "profesionalId": "prof-ibanez",
+    "prestacionId": "ortodoncia",
+    "inicio": "2026-10-29T17:00:00.000Z",
+    "fin": "2026-10-29T17:30:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-015",
+    "pacienteId": "pac-026",
+    "profesionalId": "prof-ferreyra",
+    "prestacionId": "limpieza",
+    "inicio": "2026-10-29T18:45:00.000Z",
+    "fin": "2026-10-29T19:30:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-041",
+    "pacienteId": "pac-015",
+    "profesionalId": "prof-ibanez",
+    "prestacionId": "limpieza",
+    "inicio": "2026-10-29T19:45:00.000Z",
+    "fin": "2026-10-29T20:30:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-005",
+    "pacienteId": "pac-031",
+    "profesionalId": "prof-quintana",
+    "prestacionId": "consulta",
+    "inicio": "2026-10-29T21:00:00.000Z",
+    "fin": "2026-10-29T21:30:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-022",
+    "pacienteId": "pac-014",
+    "profesionalId": "prof-ferreyra",
+    "prestacionId": "blanqueamiento",
+    "inicio": "2026-10-30T13:00:00.000Z",
+    "fin": "2026-10-30T14:00:00.000Z",
+    "estado": "ausente",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-026",
+    "pacienteId": "pac-011",
+    "profesionalId": "prof-ferreyra",
+    "prestacionId": "urgencia",
+    "inicio": "2026-10-30T19:45:00.000Z",
+    "fin": "2026-10-30T20:15:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-021",
+    "pacienteId": "pac-001",
+    "profesionalId": "prof-ferreyra",
+    "prestacionId": "blanqueamiento",
+    "inicio": "2026-10-30T20:15:00.000Z",
+    "fin": "2026-10-30T21:15:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-003",
+    "pacienteId": "pac-030",
+    "profesionalId": "prof-quintana",
+    "prestacionId": "urgencia",
+    "inicio": "2026-10-31T13:45:00.000Z",
+    "fin": "2026-10-31T14:15:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-039",
+    "pacienteId": "pac-028",
+    "profesionalId": "prof-ibanez",
+    "prestacionId": "consulta",
+    "inicio": "2026-10-31T13:45:00.000Z",
+    "fin": "2026-10-31T14:15:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-013",
+    "pacienteId": "pac-036",
+    "profesionalId": "prof-ibanez",
+    "prestacionId": "limpieza",
+    "inicio": "2026-10-31T14:30:00.000Z",
+    "fin": "2026-10-31T15:15:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-043",
+    "pacienteId": "pac-019",
+    "profesionalId": "prof-ferreyra",
+    "prestacionId": "urgencia",
+    "inicio": "2026-10-31T15:00:00.000Z",
+    "fin": "2026-10-31T15:30:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-031",
+    "pacienteId": "pac-007",
+    "profesionalId": "prof-ferreyra",
+    "prestacionId": "limpieza",
+    "inicio": "2026-11-02T13:15:00.000Z",
+    "fin": "2026-11-02T14:00:00.000Z",
+    "estado": "reservado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-030",
+    "pacienteId": "pac-015",
+    "profesionalId": "prof-quintana",
+    "prestacionId": "urgencia",
+    "inicio": "2026-11-02T16:00:00.000Z",
+    "fin": "2026-11-02T16:30:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-053",
+    "pacienteId": "pac-015",
+    "profesionalId": "prof-ibanez",
+    "prestacionId": "limpieza",
+    "inicio": "2026-11-02T17:15:00.000Z",
+    "fin": "2026-11-02T18:00:00.000Z",
+    "estado": "reservado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-023",
+    "pacienteId": "pac-014",
+    "profesionalId": "prof-ibanez",
+    "prestacionId": "ortodoncia",
+    "inicio": "2026-11-03T18:00:00.000Z",
+    "fin": "2026-11-03T18:30:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-019",
+    "pacienteId": "pac-022",
+    "profesionalId": "prof-quintana",
+    "prestacionId": "urgencia",
+    "inicio": "2026-11-03T18:15:00.000Z",
+    "fin": "2026-11-03T18:45:00.000Z",
+    "estado": "cancelado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-032",
+    "pacienteId": "pac-022",
+    "profesionalId": "prof-ferreyra",
+    "prestacionId": "consulta",
+    "inicio": "2026-11-04T14:45:00.000Z",
+    "fin": "2026-11-04T15:15:00.000Z",
+    "estado": "reservado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-042",
+    "pacienteId": "pac-018",
+    "profesionalId": "prof-quintana",
+    "prestacionId": "urgencia",
+    "inicio": "2026-11-04T16:00:00.000Z",
+    "fin": "2026-11-04T16:30:00.000Z",
+    "estado": "reservado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-002",
+    "pacienteId": "pac-034",
+    "profesionalId": "prof-quintana",
+    "prestacionId": "consulta",
+    "inicio": "2026-11-04T17:15:00.000Z",
+    "fin": "2026-11-04T17:45:00.000Z",
+    "estado": "reservado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-033",
+    "pacienteId": "pac-012",
+    "profesionalId": "prof-quintana",
+    "prestacionId": "consulta",
+    "inicio": "2026-11-05T15:30:00.000Z",
+    "fin": "2026-11-05T16:00:00.000Z",
+    "estado": "reservado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-045",
+    "pacienteId": "pac-012",
+    "profesionalId": "prof-ibanez",
+    "prestacionId": "ortodoncia",
+    "inicio": "2026-11-05T16:15:00.000Z",
+    "fin": "2026-11-05T16:45:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-007",
+    "pacienteId": "pac-024",
+    "profesionalId": "prof-ibanez",
+    "prestacionId": "limpieza",
+    "inicio": "2026-11-05T17:15:00.000Z",
+    "fin": "2026-11-05T18:00:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-052",
+    "pacienteId": "pac-038",
+    "profesionalId": "prof-quintana",
+    "prestacionId": "arreglo",
+    "inicio": "2026-11-05T18:15:00.000Z",
+    "fin": "2026-11-05T19:00:00.000Z",
+    "estado": "reservado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-058",
+    "pacienteId": "pac-012",
+    "profesionalId": "prof-ibanez",
+    "prestacionId": "consulta",
+    "inicio": "2026-11-05T20:15:00.000Z",
+    "fin": "2026-11-05T20:45:00.000Z",
+    "estado": "reservado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-028",
+    "pacienteId": "pac-011",
+    "profesionalId": "prof-quintana",
+    "prestacionId": "urgencia",
+    "inicio": "2026-11-06T18:45:00.000Z",
+    "fin": "2026-11-06T19:15:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-038",
+    "pacienteId": "pac-015",
+    "profesionalId": "prof-ferreyra",
+    "prestacionId": "limpieza",
+    "inicio": "2026-11-06T20:15:00.000Z",
+    "fin": "2026-11-06T21:00:00.000Z",
+    "estado": "reservado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-009",
+    "pacienteId": "pac-030",
+    "profesionalId": "prof-ferreyra",
+    "prestacionId": "arreglo",
+    "inicio": "2026-11-07T12:15:00.000Z",
+    "fin": "2026-11-07T13:00:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-037",
+    "pacienteId": "pac-019",
+    "profesionalId": "prof-ibanez",
+    "prestacionId": "consulta",
+    "inicio": "2026-11-07T13:15:00.000Z",
+    "fin": "2026-11-07T13:45:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-049",
+    "pacienteId": "pac-005",
+    "profesionalId": "prof-ibanez",
+    "prestacionId": "ortodoncia",
+    "inicio": "2026-11-07T14:30:00.000Z",
+    "fin": "2026-11-07T15:00:00.000Z",
+    "estado": "reservado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-050",
+    "pacienteId": "pac-025",
+    "profesionalId": "prof-quintana",
+    "prestacionId": "conducto",
+    "inicio": "2026-11-07T14:30:00.000Z",
+    "fin": "2026-11-07T16:00:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-054",
+    "pacienteId": "pac-022",
+    "profesionalId": "prof-quintana",
+    "prestacionId": "arreglo",
+    "inicio": "2026-11-09T12:00:00.000Z",
+    "fin": "2026-11-09T12:45:00.000Z",
+    "estado": "cancelado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-017",
+    "pacienteId": "pac-032",
+    "profesionalId": "prof-ibanez",
+    "prestacionId": "limpieza",
+    "inicio": "2026-11-09T18:00:00.000Z",
+    "fin": "2026-11-09T18:45:00.000Z",
+    "estado": "reservado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-020",
+    "pacienteId": "pac-026",
+    "profesionalId": "prof-quintana",
+    "prestacionId": "arreglo",
+    "inicio": "2026-11-09T19:30:00.000Z",
+    "fin": "2026-11-09T20:15:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-016",
+    "pacienteId": "pac-023",
+    "profesionalId": "prof-ferreyra",
+    "prestacionId": "blanqueamiento",
+    "inicio": "2026-11-10T13:45:00.000Z",
+    "fin": "2026-11-10T14:45:00.000Z",
+    "estado": "reservado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-011",
+    "pacienteId": "pac-006",
+    "profesionalId": "prof-ibanez",
+    "prestacionId": "consulta",
+    "inicio": "2026-11-10T14:00:00.000Z",
+    "fin": "2026-11-10T14:30:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-012",
+    "pacienteId": "pac-023",
+    "profesionalId": "prof-quintana",
+    "prestacionId": "urgencia",
+    "inicio": "2026-11-10T15:15:00.000Z",
+    "fin": "2026-11-10T15:45:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-055",
+    "pacienteId": "pac-009",
+    "profesionalId": "prof-ferreyra",
+    "prestacionId": "limpieza",
+    "inicio": "2026-11-10T18:30:00.000Z",
+    "fin": "2026-11-10T19:15:00.000Z",
+    "estado": "reservado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-057",
+    "pacienteId": "pac-031",
+    "profesionalId": "prof-ferreyra",
+    "prestacionId": "blanqueamiento",
+    "inicio": "2026-11-11T12:15:00.000Z",
+    "fin": "2026-11-11T13:15:00.000Z",
+    "estado": "reservado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-035",
+    "pacienteId": "pac-038",
+    "profesionalId": "prof-quintana",
+    "prestacionId": "extraccion",
+    "inicio": "2026-11-11T16:00:00.000Z",
+    "fin": "2026-11-11T17:00:00.000Z",
+    "estado": "reservado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-008",
+    "pacienteId": "pac-014",
+    "profesionalId": "prof-ferreyra",
+    "prestacionId": "urgencia",
+    "inicio": "2026-11-11T17:15:00.000Z",
+    "fin": "2026-11-11T17:45:00.000Z",
+    "estado": "reservado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-040",
+    "pacienteId": "pac-008",
+    "profesionalId": "prof-ferreyra",
+    "prestacionId": "consulta",
+    "inicio": "2026-11-11T17:45:00.000Z",
+    "fin": "2026-11-11T18:15:00.000Z",
+    "estado": "reservado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-029",
+    "pacienteId": "pac-028",
+    "profesionalId": "prof-ibanez",
+    "prestacionId": "ortodoncia",
+    "inicio": "2026-11-11T20:45:00.000Z",
+    "fin": "2026-11-11T21:15:00.000Z",
+    "estado": "cancelado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-034",
+    "pacienteId": "pac-013",
+    "profesionalId": "prof-ferreyra",
+    "prestacionId": "consulta",
+    "inicio": "2026-11-11T21:15:00.000Z",
+    "fin": "2026-11-11T21:45:00.000Z",
+    "estado": "reservado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-004",
+    "pacienteId": "pac-014",
+    "profesionalId": "prof-quintana",
+    "prestacionId": "consulta",
+    "inicio": "2026-11-12T14:45:00.000Z",
+    "fin": "2026-11-12T15:15:00.000Z",
+    "estado": "reservado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-018",
+    "pacienteId": "pac-001",
+    "profesionalId": "prof-ferreyra",
+    "prestacionId": "limpieza",
+    "inicio": "2026-11-12T17:45:00.000Z",
+    "fin": "2026-11-12T18:30:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-024",
+    "pacienteId": "pac-013",
+    "profesionalId": "prof-quintana",
+    "prestacionId": "conducto",
+    "inicio": "2026-11-12T20:15:00.000Z",
+    "fin": "2026-11-12T21:45:00.000Z",
+    "estado": "reservado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-056",
+    "pacienteId": "pac-022",
+    "profesionalId": "prof-ferreyra",
+    "prestacionId": "limpieza",
+    "inicio": "2026-11-13T16:00:00.000Z",
+    "fin": "2026-11-13T16:45:00.000Z",
+    "estado": "confirmado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  },
+  {
+    "id": "tur-001",
+    "pacienteId": "pac-002",
+    "profesionalId": "prof-ibanez",
+    "prestacionId": "limpieza",
+    "inicio": "2026-11-14T14:45:00.000Z",
+    "fin": "2026-11-14T15:30:00.000Z",
+    "estado": "reservado",
+    "creadoEn": "2026-10-26T10:00:00.000Z"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "consulta",
+    "nombre": "Consulta y diagnóstico",
+    "duracionMin": 30,
+    "precioArs": 25000
+  },
+  {
+    "id": "limpieza",
+    "nombre": "Limpieza dental",
+    "duracionMin": 45,
+    "precioArs": 38000
+  },
+  {
+    "id": "arreglo",
+    "nombre": "Arreglo (obturación)",
+    "duracionMin": 45,
+    "precioArs": 52000
+  },
+  {
+    "id": "extraccion",
+    "nombre": "Extracción simple",
+    "duracionMin": 60,
+    "precioArs": 60000
+  },
+  {
+    "id": "conducto",
+    "nombre": "Tratamiento de conducto",
+    "duracionMin": 90,
+    "precioArs": 180000
+  },
+  {
+    "id": "blanqueamiento",
+    "nombre": "Blanqueamiento",
+    "duracionMin": 60,
+    "precioArs": 150000
+  },
+  {
+    "id": "ortodoncia",
+    "nombre": "Control de ortodoncia",
+    "duracionMin": 30,
+    "precioArs": 30000
+  },
+  {
+    "id": "urgencia",
+    "nombre": "Urgencia (dolor)",
+    "duracionMin": 30,
+    "precioArs": 35000
+  }
+]

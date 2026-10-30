@@ -1,0 +1,50 @@
+[
+  {
+    "telefono": "+5492995550104",
+    "pacienteId": "pac-005",
+    "direccion": "entrante",
+    "tipo": "texto",
+    "texto": "Hola, ¿la obra social me cubre el arreglo que me hicieron la semana pasada? Me llegó un cobro.",
+    "creadoEn": "2026-10-30T13:10:00.000Z"
+  },
+  {
+    "telefono": "+5492995550104",
+    "pacienteId": "pac-005",
+    "direccion": "saliente",
+    "tipo": "texto",
+    "texto": "Eso lo revisa recepción con tu obra social. Ya les paso tu consulta y te escriben por acá.",
+    "creadoEn": "2026-10-30T13:11:00.000Z"
+  },
+  {
+    "telefono": "+5492995550108",
+    "pacienteId": "pac-009",
+    "direccion": "entrante",
+    "tipo": "texto",
+    "texto": "Quiero hablar con una persona por un presupuesto de ortodoncia",
+    "creadoEn": "2026-10-30T14:38:00.000Z"
+  },
+  {
+    "telefono": "+5492995550108",
+    "pacienteId": "pac-009",
+    "direccion": "saliente",
+    "tipo": "texto",
+    "texto": "¡Claro! Le paso tu consulta a recepción y una persona te escribe por acá a la brevedad.",
+    "creadoEn": "2026-10-30T14:39:00.000Z"
+  },
+  {
+    "telefono": "+5492995550112",
+    "pacienteId": "pac-013",
+    "direccion": "entrante",
+    "tipo": "texto",
+    "texto": "Me duele mucho una muela, no aguanto",
+    "creadoEn": "2026-10-29T22:03:00.000Z"
+  },
+  {
+    "telefono": "+5492995550112",
+    "pacienteId": "pac-013",
+    "direccion": "saliente",
+    "tipo": "texto",
+    "texto": "Lamento mucho el dolor. Ya le aviso a recepción para que te atiendan lo antes posible; si es urgente, llamá ahora a la guardia: +54 9 299 555-0199 (guardia odontológica ficticia, las 24 h).",
+    "creadoEn": "2026-10-29T22:04:00.000Z"
+  }
+]

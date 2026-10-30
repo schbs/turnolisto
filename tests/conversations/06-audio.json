@@ -1,0 +1,26 @@
+{
+  "nombre": "audio",
+  "descripcion": "Nota de voz transcripta con Whisper: pide turno para mañana",
+  "telefono": "5492995550110",
+  "nombre_perfil": "Simón",
+  "ahora": "2026-11-02 08:00",
+  "audios": {
+    "audio-turno": "Hola, buen día. ¿Tienen turno mañana a la mañana para una consulta?"
+  },
+  "pasos": [
+    {
+      "usuario": {
+        "audio": "audio-turno"
+      },
+      "espera": {
+        "herramientas": [
+          "buscar_slots"
+        ],
+        "interactivo": "lista"
+      }
+    }
+  ],
+  "al_final": {
+    "handoffs": 0
+  }
+}

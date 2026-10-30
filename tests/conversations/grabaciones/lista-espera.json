@@ -1,0 +1,55 @@
+{
+  "modelo": "gemini-3.5-flash-lite",
+  "versionPrompt": "2026-10-30.1",
+  "grabadoEl": "2026-10-30T18:51:10.780Z",
+  "respuestas": [
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "anotar_lista_espera",
+              "args": {
+                "prestacion_id": "limpieza",
+                "desde": "2026-11-02",
+                "hasta": "2026-11-06"
+              },
+              "id": "call_983239"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TyiV3RKwGjpRgNXRNKJYmh3VDb/6jqRH1fGn6j3ph5/SIonn/iLg8op3Gf/9zZ18rOIgpefIGg3BVQIKL8SpoAoXTJHtypo5ffGJZLZ2xPpZO6C8T8yKKsf0="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2458,
+        "salida": 54,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "responder",
+              "args": {
+                "entendio": true,
+                "texto": "¡Listo, Lucía! Te anoté en la lista de espera para limpieza desde hoy hasta el viernes. Si se libera un lugar, te avisamos por acá. 😊",
+                "tema": "turnos"
+              },
+              "id": "call_533283"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TtL/80mRvPCiUBa4aw2uldTtQNPZpUwxf/4HYGnQ1uDX/AhiM//2BTdSTUK7dtYUwSTEbXX0nDZeHu2sq5sSii3gZLYiD9Yzxjp3r/Hzm7ofjLyVvfgWm0wo="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2581,
+        "salida": 60,
+        "pensamiento": 0
+      }
+    }
+  ]
+}

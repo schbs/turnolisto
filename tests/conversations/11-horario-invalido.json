@@ -1,0 +1,25 @@
+{
+  "nombre": "horario-invalido",
+  "descripcion": "Pide turno un domingo: no se reserva y se explica que ese día no se atiende",
+  "telefono": "5492995550115",
+  "nombre_perfil": "Lucía",
+  "ahora": "2026-11-02 08:00",
+  "pasos": [
+    {
+      "usuario": {
+        "texto": "Quiero un turno para una consulta el domingo a las 10"
+      },
+      "espera": {
+        "prohibidas": [
+          "reservar_turno"
+        ],
+        "incluye": [
+          "domingo"
+        ]
+      }
+    }
+  ],
+  "al_final": {
+    "handoffs": 0
+  }
+}

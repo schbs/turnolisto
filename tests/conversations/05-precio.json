@@ -1,0 +1,27 @@
+{
+  "nombre": "precio",
+  "descripcion": "Pregunta el precio de un blanqueamiento: sale de la tabla, no se inventa",
+  "telefono": "5492995550102",
+  "nombre_perfil": "Tomás",
+  "ahora": "2026-11-02 08:00",
+  "pasos": [
+    {
+      "usuario": {
+        "texto": "¿Cuánto sale un blanqueamiento?"
+      },
+      "espera": {
+        "herramientas": [
+          "info_clinica"
+        ],
+        "incluye": [
+          "150.000",
+          "150000",
+          "150 000"
+        ]
+      }
+    }
+  ],
+  "al_final": {
+    "handoffs": 0
+  }
+}

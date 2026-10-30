@@ -1,0 +1,24 @@
+{
+  "nombre": "urgencia",
+  "descripcion": "Dolor fuerte e hinchazón: deriva y pasa el teléfono de guardia",
+  "telefono": "5492995550129",
+  "nombre_perfil": "Germán",
+  "ahora": "2026-11-02 08:00",
+  "pasos": [
+    {
+      "usuario": {
+        "texto": "Tengo un dolor muy fuerte en una muela y se me hinchó la cara"
+      },
+      "espera": {
+        "handoff": "urgencia",
+        "sin_modelo": true,
+        "incluye": [
+          "555-0199"
+        ]
+      }
+    }
+  ],
+  "al_final": {
+    "handoffs": 1
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "modelo": "gemini-3.5-flash-lite",
+  "versionPrompt": "2026-10-30.1",
+  "grabadoEl": "2026-10-30T18:50:07.537Z",
+  "respuestas": [
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "buscar_slots",
+              "args": {
+                "franja": "tarde",
+                "prestacion_id": "limpieza",
+                "fecha": "2026-11-05"
+              },
+              "id": "call_1071258"
+            },
+            "thoughtSignature": "EmAKXgFpFH0Tg5iZzZmCZp/9RiINKwNy/vMeVwJ+vlPASiU3bL4aJPKi+3JKBhx0e01zVPH3fSyFKQTvXgpwICPhKY1Dr88pEw23ieBd7BjihbRWAFe8S8qdccBqvbfzoYc="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2443,
+        "salida": 43,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "responder",
+              "args": {
+                "tema": "turnos",
+                "texto": "Hola Tomás! Para el jueves 5 a la tarde tengo con la Dra. Lucía Ferreyra a las 13:00, 13:30, 14:00 y 14:30, o con la Dra. Sofía Ibáñez a las 15:00, 15:30, 16:00 y 16:30. ¿Cuál te queda mejor? 🦷",
+                "entendio": true
+              },
+              "id": "call_795703"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TSDadtUn/1l7bQZ/uZMCq6dySuQXjdCHrQk1F8h7lUAbAexooC6zo0LaXhDSNC/VeBcpFI3ZJI1IwZnkguaVamIdqKDqIOnDl48YhQhiAEzd8NFgE/IHOHD8="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2642,
+        "salida": 124,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "reservar_turno",
+              "args": {
+                "profesional_id": "prof-ibanez",
+                "prestacion_id": "limpieza",
+                "inicio": "2026-11-05T15:00"
+              },
+              "id": "call_722888"
+            },
+            "thoughtSignature": "EmAKXgFpFH0T2PI/Lbjl2zMnnCtX0cV3euwWGzyDBJq+Twq/ix93xYlZ1EkLRW/HL48b9vZfr8mwzDGytxjG6l9oEGyDpMwVFcCfDbwXI5WVHmtBddHxxWD6pQQYO3WQvy4="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2560,
+        "salida": 55,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "responder",
+              "args": {
+                "entendio": true,
+                "texto": "¡Listo, Tomás! Te guardé el turno para limpieza dental con la Dra. Sofía Ibáñez el jueves 5 de noviembre a las 15:00. 🦷",
+                "tema": "turnos"
+              },
+              "id": "call_572625"
+            },
+            "thoughtSignature": "EmAKXgFpFH0ThgiTbbNy3tU3ekrJ4Hd/HZ16W2K3nMNXSDf6JykIu5WNRXDGbGvbyBvnR0/KqM5uTsBPH1UKQT7nN539kTaSFYSP+oGCHyBZxsIZ/s5Fj5IuIhqzqXG4Gos="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2715,
+        "salida": 64,
+        "pensamiento": 0
+      }
+    }
+  ]
+}

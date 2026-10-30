@@ -1,0 +1,24 @@
+{
+  "nombre": "fuera-de-tema",
+  "descripcion": "Pregunta algo que no es de la clínica: respuesta breve y vuelta al tema",
+  "telefono": "5492995550102",
+  "nombre_perfil": "Tomás",
+  "ahora": "2026-11-02 08:00",
+  "pasos": [
+    {
+      "usuario": {
+        "texto": "¿Me recomendás una serie para ver hoy a la noche?"
+      },
+      "espera": {
+        "prohibidas": [
+          "buscar_slots",
+          "reservar_turno",
+          "derivar_a_recepcion"
+        ]
+      }
+    }
+  ],
+  "al_final": {
+    "handoffs": 0
+  }
+}

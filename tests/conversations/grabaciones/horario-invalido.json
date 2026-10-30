@@ -1,0 +1,56 @@
+{
+  "modelo": "gemini-3.5-flash-lite",
+  "versionPrompt": "2026-10-30.1",
+  "grabadoEl": "2026-10-30T18:54:50.564Z",
+  "respuestas": [
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "buscar_slots",
+              "args": {
+                "franja": "manana",
+                "fecha": "2026-11-08",
+                "hora_preferida": "10:00",
+                "prestacion_id": "consulta"
+              },
+              "id": "call_1184011"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TngCI9wxYcv3MtCHbWXB46kckbghFJyWyrKMspJt/KE2ZHuy62KnREB9xubDhXsJvn6TB6hZeG4e5uMJrVb17Z6Bf1wO/aqIGYwQvNf9N11NcFpFA9IOVuZI="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2450,
+        "salida": 55,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "responder",
+              "args": {
+                "entendio": true,
+                "texto": "El domingo la clínica no atiende. Te puedo ofrecer el lunes 9 a las 09:00 o el martes 10 a las 09:00, ¿te sirve alguno? 🦷",
+                "tema": "turnos"
+              },
+              "id": "call_1212959"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TWy6tPXBgw4LS/pbbGBkWUcHy8BcviCOuXWvVeTyn1+Xe50KDt/ByRCsv72DKfRBOK9xPcai8duF4klNvggZ4Vt9RnLDdtPi62qcM8MM5XydfVYMPXRuTNmU="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2667,
+        "salida": 70,
+        "pensamiento": 0
+      }
+    }
+  ]
+}

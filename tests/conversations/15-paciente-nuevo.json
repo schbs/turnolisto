@@ -1,0 +1,29 @@
+{
+  "nombre": "paciente-nuevo",
+  "descripcion": "Número desconocido: pide nombre y apellido antes de reservar",
+  "telefono": "5492995550188",
+  "nombre_perfil": "Martu",
+  "ahora": "2026-11-02 08:00",
+  "pasos": [
+    {
+      "usuario": {
+        "texto": "Hola, quiero turno para una consulta mañana a las 10"
+      },
+      "espera": {}
+    },
+    {
+      "usuario": {
+        "texto": "Soy Martina Ruiz"
+      },
+      "espera": {}
+    }
+  ],
+  "al_final": {
+    "paciente_nuevo": "Martina Ruiz",
+    "turno_nuevo": {
+      "prestacion": "consulta",
+      "inicio": "2026-11-03T10:00"
+    },
+    "eventos_calendario": 1
+  }
+}

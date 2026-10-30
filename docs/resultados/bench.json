@@ -1,0 +1,319 @@
+{
+  "fecha": "2026-10-30T20:12:27.176Z",
+  "modelo": "gemini-3.5-flash-lite",
+  "versionPrompt": "2026-10-30.1",
+  "metodo": "procesarMensaje de punta a punta (webhook firmado → reglas → agente → herramientas) con Gemini real; Calendar y WhatsApp falsos; base en memoria",
+  "mensajesConIA": 21,
+  "latenciaMs": {
+    "p50": 2238,
+    "p95": 89161,
+    "min": 974,
+    "max": 89450
+  },
+  "reintentos": {
+    "total": 4,
+    "motivos": [
+      {
+        "caso": "faq-obra-social",
+        "motivo": "429 límite por minuto (espera 24 s)"
+      },
+      {
+        "caso": "faq-obra-social",
+        "motivo": "429 límite por minuto (espera 59 s)"
+      },
+      {
+        "caso": "nombre-con-tilde",
+        "motivo": "429 límite por minuto (espera 23 s)"
+      },
+      {
+        "caso": "nombre-con-tilde",
+        "motivo": "429 límite por minuto (espera 59 s)"
+      }
+    ]
+  },
+  "latenciaSinReintentosMs": {
+    "mensajes": 18,
+    "p50": 2103,
+    "p95": 7719
+  },
+  "llamadasPorMensaje": 2.05,
+  "conversacionesOk": "14/14",
+  "tokensPromedioPorConversacion": {
+    "entrada": 7984,
+    "salida": 222
+  },
+  "costoUsd": {
+    "fuente": "Gemini 3.5 Flash-Lite plan pago: USD 0,30 / 1M tokens de entrada y USD 2,50 / 1M de salida (ai.google.dev, 30/10/2026). En el plan gratis: 0.",
+    "promedioPorConversacion": 0.00295,
+    "reservaCompleta": 0.00382
+  },
+  "mensajes": [
+    {
+      "caso": "reservar",
+      "ms": 2890,
+      "llamadas": 2,
+      "entrada": 5085,
+      "salida": 167
+    },
+    {
+      "caso": "reservar",
+      "ms": 2415,
+      "llamadas": 2,
+      "entrada": 5275,
+      "salida": 119
+    },
+    {
+      "caso": "reservar",
+      "ms": 2027,
+      "llamadas": 2,
+      "entrada": 5085,
+      "salida": 142
+    },
+    {
+      "caso": "reservar",
+      "ms": 2725,
+      "llamadas": 2,
+      "entrada": 5225,
+      "salida": 118
+    },
+    {
+      "caso": "reprogramar",
+      "ms": 1921,
+      "llamadas": 2,
+      "entrada": 5142,
+      "salida": 134
+    },
+    {
+      "caso": "reprogramar",
+      "ms": 2033,
+      "llamadas": 2,
+      "entrada": 5288,
+      "salida": 111
+    },
+    {
+      "caso": "cancelar",
+      "ms": 1126,
+      "llamadas": 1,
+      "entrada": 2498,
+      "salida": 71
+    },
+    {
+      "caso": "cancelar",
+      "ms": 2092,
+      "llamadas": 2,
+      "entrada": 5277,
+      "salida": 137
+    },
+    {
+      "caso": "faq-obra-social",
+      "ms": 89450,
+      "llamadas": 2,
+      "entrada": 5056,
+      "salida": 135
+    },
+    {
+      "caso": "precio",
+      "ms": 7719,
+      "llamadas": 2,
+      "entrada": 5032,
+      "salida": 74
+    },
+    {
+      "caso": "audio",
+      "ms": 2131,
+      "llamadas": 2,
+      "entrada": 5258,
+      "salida": 124
+    },
+    {
+      "caso": "fuera-de-tema",
+      "ms": 974,
+      "llamadas": 1,
+      "entrada": 2442,
+      "salida": 57
+    },
+    {
+      "caso": "duplicado",
+      "ms": 2551,
+      "llamadas": 2,
+      "entrada": 4942,
+      "salida": 82
+    },
+    {
+      "caso": "horario-invalido",
+      "ms": 1833,
+      "llamadas": 2,
+      "entrada": 4964,
+      "salida": 87
+    },
+    {
+      "caso": "lista-espera",
+      "ms": 2238,
+      "llamadas": 2,
+      "entrada": 5039,
+      "salida": 113
+    },
+    {
+      "caso": "reprogramar-boton",
+      "ms": 2004,
+      "llamadas": 2,
+      "entrada": 5248,
+      "salida": 126
+    },
+    {
+      "caso": "reprogramar-boton",
+      "ms": 2290,
+      "llamadas": 2,
+      "entrada": 5373,
+      "salida": 111
+    },
+    {
+      "caso": "paciente-nuevo",
+      "ms": 2969,
+      "llamadas": 2,
+      "entrada": 5312,
+      "salida": 509
+    },
+    {
+      "caso": "paciente-nuevo",
+      "ms": 2103,
+      "llamadas": 2,
+      "entrada": 5165,
+      "salida": 135
+    },
+    {
+      "caso": "nombre-con-tilde",
+      "ms": 4579,
+      "llamadas": 3,
+      "entrada": 8201,
+      "salida": 296
+    },
+    {
+      "caso": "nombre-con-tilde",
+      "ms": 89161,
+      "llamadas": 4,
+      "entrada": 10865,
+      "salida": 261
+    }
+  ],
+  "conversaciones": [
+    {
+      "caso": "reservar",
+      "ok": true,
+      "fallas": [],
+      "entrada": 10360,
+      "salida": 286,
+      "reintentos": []
+    },
+    {
+      "caso": "reservar",
+      "ok": true,
+      "fallas": [],
+      "entrada": 10310,
+      "salida": 260,
+      "reintentos": []
+    },
+    {
+      "caso": "reprogramar",
+      "ok": true,
+      "fallas": [],
+      "entrada": 10430,
+      "salida": 245,
+      "reintentos": []
+    },
+    {
+      "caso": "cancelar",
+      "ok": true,
+      "fallas": [],
+      "entrada": 7775,
+      "salida": 208,
+      "reintentos": []
+    },
+    {
+      "caso": "faq-obra-social",
+      "ok": true,
+      "fallas": [],
+      "entrada": 5056,
+      "salida": 135,
+      "reintentos": [
+        "429 límite por minuto (espera 24 s)",
+        "429 límite por minuto (espera 59 s)"
+      ]
+    },
+    {
+      "caso": "precio",
+      "ok": true,
+      "fallas": [],
+      "entrada": 5032,
+      "salida": 74,
+      "reintentos": []
+    },
+    {
+      "caso": "audio",
+      "ok": true,
+      "fallas": [],
+      "entrada": 5258,
+      "salida": 124,
+      "reintentos": []
+    },
+    {
+      "caso": "fuera-de-tema",
+      "ok": true,
+      "fallas": [],
+      "entrada": 2442,
+      "salida": 57,
+      "reintentos": []
+    },
+    {
+      "caso": "duplicado",
+      "ok": true,
+      "fallas": [],
+      "entrada": 4942,
+      "salida": 82,
+      "reintentos": []
+    },
+    {
+      "caso": "horario-invalido",
+      "ok": true,
+      "fallas": [],
+      "entrada": 4964,
+      "salida": 87,
+      "reintentos": []
+    },
+    {
+      "caso": "lista-espera",
+      "ok": true,
+      "fallas": [],
+      "entrada": 5039,
+      "salida": 113,
+      "reintentos": []
+    },
+    {
+      "caso": "reprogramar-boton",
+      "ok": true,
+      "fallas": [],
+      "entrada": 10621,
+      "salida": 237,
+      "reintentos": []
+    },
+    {
+      "caso": "paciente-nuevo",
+      "ok": true,
+      "fallas": [],
+      "entrada": 10477,
+      "salida": 644,
+      "reintentos": []
+    },
+    {
+      "caso": "nombre-con-tilde",
+      "ok": true,
+      "fallas": [],
+      "entrada": 19066,
+      "salida": 557,
+      "reintentos": [
+        "429 límite por minuto (espera 23 s)",
+        "429 límite por minuto (espera 59 s)"
+      ]
+    }
+  ]
+}

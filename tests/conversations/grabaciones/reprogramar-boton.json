@@ -1,0 +1,103 @@
+{
+  "modelo": "gemini-3.5-flash-lite",
+  "versionPrompt": "2026-10-30.1",
+  "grabadoEl": "2026-10-30T18:52:28.575Z",
+  "respuestas": [
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "buscar_slots",
+              "args": {
+                "profesional_id": "prof-ferreyra",
+                "franja": "tarde",
+                "fecha": "2026-11-09",
+                "prestacion_id": "arreglo"
+              },
+              "id": "call_631757"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TdESIjNe+LcOALZlCVQO2Fq5phgDZcnzx6/JdVlxWUfFNYB+R3webA/c7gdOne59KfHZalCJhqSCEBvsz9JysUDsy0/VBEqK2gVfGTGUcB2+xVxgfQUszT7k="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2550,
+        "salida": 56,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "responder",
+              "args": {
+                "entendio": true,
+                "texto": "Para el lunes 9 a la tarde con la Dra. Ferreyra tengo a las 13:00, 13:30, 14:00 o 14:30. ¿Cuál te va mejor?",
+                "tema": "turnos"
+              },
+              "id": "call_791400"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TmSglEaXVPjzklEF/L+J8zAlVcCEhV+sV3Ztsg6j0Y+cEwoTOyfKuo4HunbROlXL0Kaj2yWpcpDe1/rtH8TgtHMPtBhnex+jbPe1KfyOeLFmC8bWOn6YrvcM="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2698,
+        "salida": 77,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "reprogramar_turno",
+              "args": {
+                "turno_id": "tur-009",
+                "nuevo_inicio": "2026-11-09T14:00"
+              },
+              "id": "call_987824"
+            },
+            "thoughtSignature": "EtkCCtYCAWkUfRPePXADCmjO+fBfcAGy2nhXSRIbUanVm+vrfzM8vlViy2MASVhrDaUaN4SyN58VpJywGLRYsMEUrhvME32oA9CGM/47l7ys7KeFv5fVQEcgmgmqzKH4uaqulWS+OS/eoXCLXMjnSGcx2hXYK+v0J7frJrWuqj5wFNu9SnLF9T+wLA10a0YDGN6TUlY12O16Ak9YRqYaBZDxbxv2gYlQiibEVrsAZeJ4U6HFcAWbHNA9fQ2KyNRHJwFGbRlEbsmQ5CtHX7PnqjirK8WS74AO2jttKAOjR1yPIDXGUbP54DhL/yiZwu8gxOhsbtRG1nFJYUgcbe9uWq0pQzhpEpUKxju7rQABissNHxeCeUQeqIgzoa0Q5FZJrhRqSsgDmUZh6eCSWNI/62Thp/HQib3jj3VcBZQniUCc4TGX86/qzwvf7ZEUR/y+AKSdacfeE+1ZXeXS"
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2612,
+        "salida": 47,
+        "pensamiento": 104
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "responder",
+              "args": {
+                "entendio": true,
+                "texto": "Listo, Germán. Quedó reprogramado tu arreglo para el lunes 9/11 a las 14:00 con la Dra. Ferreyra. ¡Nos vemos!🦷",
+                "tema": "turnos"
+              },
+              "id": "call_1003658"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TcakR60H0kx8wl8NbVIvWRPOYI9Dr3Cb6Lkk3NjNc0QTecnROVsdn8IN0v0FNwfcZkTxzK4r1astP59S/r7CCa3ZVtRMu5hFbcxDWwLNS88EYt1aTx4eMC78="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2879,
+        "salida": 66,
+        "pensamiento": 0
+      }
+    }
+  ]
+}

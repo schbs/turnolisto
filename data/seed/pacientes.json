@@ -1,0 +1,322 @@
+[
+  {
+    "id": "pac-001",
+    "nombre": "Ezequiel Villalba",
+    "telefono": "+5492995550100",
+    "email": "ezequiel.villalba.00@example.com",
+    "obraSocial": "Salud Confluencia (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-002",
+    "nombre": "Lucía Carrizo",
+    "telefono": "+5492995550101",
+    "email": "lucia.carrizo.01@example.com",
+    "obraSocial": "Prepaga Limay (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-003",
+    "nombre": "Tomás Ríos",
+    "telefono": "+5492995550102",
+    "email": "tomas.rios.02@example.com",
+    "obraSocial": "Particular",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-004",
+    "nombre": "Lucía Zárate",
+    "telefono": "+5492995550103",
+    "email": "lucia.zarate.03@example.com",
+    "obraSocial": "OS Valle Demo (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-005",
+    "nombre": "Joaquín Ríos",
+    "telefono": "+5492995550104",
+    "email": "joaquin.rios.04@example.com",
+    "obraSocial": "Particular",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-006",
+    "nombre": "Ramiro Peña",
+    "telefono": "+5492995550105",
+    "email": "ramiro.pena.05@example.com",
+    "obraSocial": "Salud Confluencia (ficticia)",
+    "optInWhatsapp": false
+  },
+  {
+    "id": "pac-007",
+    "nombre": "Germán Carrizo",
+    "telefono": "+5492995550106",
+    "email": "german.carrizo.06@example.com",
+    "obraSocial": "Prepaga Limay (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-008",
+    "nombre": "Martina Núñez",
+    "telefono": "+5492995550107",
+    "email": "martina.nunez.07@example.com",
+    "obraSocial": "OS Valle Demo (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-009",
+    "nombre": "Rocío Ríos",
+    "telefono": "+5492995550108",
+    "email": "rocio.rios.08@example.com",
+    "obraSocial": "Salud Confluencia (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-010",
+    "nombre": "Joaquín Ríos",
+    "telefono": "+5492995550109",
+    "email": "joaquin.rios.09@example.com",
+    "obraSocial": "Particular",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-011",
+    "nombre": "Simón Núñez",
+    "telefono": "+5492995550110",
+    "email": "simon.nunez.10@example.com",
+    "obraSocial": "Prepaga Limay (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-012",
+    "nombre": "Florencia Funes",
+    "telefono": "+5492995550111",
+    "email": "florencia.funes.11@example.com",
+    "obraSocial": "OS Valle Demo (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-013",
+    "nombre": "Camila Carrizo",
+    "telefono": "+5492995550112",
+    "email": "camila.carrizo.12@example.com",
+    "obraSocial": "Salud Confluencia (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-014",
+    "nombre": "Agustina Molina",
+    "telefono": "+5492995550113",
+    "email": "agustina.molina.13@example.com",
+    "obraSocial": "Prepaga Limay (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-015",
+    "nombre": "Julieta Rodríguez",
+    "telefono": "+5492995550114",
+    "email": "julieta.rodriguez.14@example.com",
+    "obraSocial": "Particular",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-016",
+    "nombre": "Lucía Gómez",
+    "telefono": "+5492995550115",
+    "email": "lucia.gomez.15@example.com",
+    "obraSocial": "OS Valle Demo (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-017",
+    "nombre": "Martina Sosa",
+    "telefono": "+5492995550116",
+    "email": "martina.sosa.16@example.com",
+    "obraSocial": "OS Valle Demo (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-018",
+    "nombre": "Martina Carrizo",
+    "telefono": "+5492995550117",
+    "email": "martina.carrizo.17@example.com",
+    "obraSocial": "Prepaga Limay (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-019",
+    "nombre": "Lucía Ortiz",
+    "telefono": "+5492995550118",
+    "email": "lucia.ortiz.18@example.com",
+    "obraSocial": "Particular",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-020",
+    "nombre": "Valentina Núñez",
+    "telefono": "+5492995550119",
+    "email": "valentina.nunez.19@example.com",
+    "obraSocial": "Particular",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-021",
+    "nombre": "Andrés Zárate",
+    "telefono": "+5492995550120",
+    "email": "andres.zarate.20@example.com",
+    "obraSocial": "Salud Confluencia (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-022",
+    "nombre": "Martina Carrizo",
+    "telefono": "+5492995550121",
+    "email": "martina.carrizo.21@example.com",
+    "obraSocial": "Particular",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-023",
+    "nombre": "Lucía Villalba",
+    "telefono": "+5492995550122",
+    "email": "lucia.villalba.22@example.com",
+    "obraSocial": "Salud Confluencia (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-024",
+    "nombre": "Julieta Gómez",
+    "telefono": "+5492995550123",
+    "email": "julieta.gomez.23@example.com",
+    "obraSocial": "Prepaga Limay (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-025",
+    "nombre": "Simón Godoy",
+    "telefono": "+5492995550124",
+    "email": "simon.godoy.24@example.com",
+    "obraSocial": "Salud Confluencia (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-026",
+    "nombre": "Belén Molina",
+    "telefono": "+5492995550125",
+    "email": "belen.molina.25@example.com",
+    "obraSocial": "OS Valle Demo (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-027",
+    "nombre": "Martina Funes",
+    "telefono": "+5492995550126",
+    "email": "martina.funes.26@example.com",
+    "obraSocial": "Prepaga Limay (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-028",
+    "nombre": "Martina Acuña",
+    "telefono": "+5492995550127",
+    "email": "martina.acuna.27@example.com",
+    "obraSocial": "Salud Confluencia (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-029",
+    "nombre": "Valentina Peña",
+    "telefono": "+5492995550128",
+    "email": "valentina.pena.28@example.com",
+    "obraSocial": "OS Valle Demo (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-030",
+    "nombre": "Germán Zárate",
+    "telefono": "+5492995550129",
+    "email": "german.zarate.29@example.com",
+    "obraSocial": "Prepaga Limay (ficticia)",
+    "optInWhatsapp": false
+  },
+  {
+    "id": "pac-031",
+    "nombre": "Martina Benítez",
+    "telefono": "+5492995550130",
+    "email": "martina.benitez.30@example.com",
+    "obraSocial": "Salud Confluencia (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-032",
+    "nombre": "Nicolás Ortiz",
+    "telefono": "+5492995550131",
+    "email": "nicolas.ortiz.31@example.com",
+    "obraSocial": "Salud Confluencia (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-033",
+    "nombre": "Simón Sosa",
+    "telefono": "+5492995550132",
+    "email": "simon.sosa.32@example.com",
+    "obraSocial": "Particular",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-034",
+    "nombre": "Matías Godoy",
+    "telefono": "+5492995550133",
+    "email": "matias.godoy.33@example.com",
+    "obraSocial": "OS Valle Demo (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-035",
+    "nombre": "Martina Rodríguez",
+    "telefono": "+5492995550134",
+    "email": "martina.rodriguez.34@example.com",
+    "obraSocial": "OS Valle Demo (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-036",
+    "nombre": "Nicolás Peña",
+    "telefono": "+5492995550135",
+    "email": "nicolas.pena.35@example.com",
+    "obraSocial": "OS Valle Demo (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-037",
+    "nombre": "Martina Godoy",
+    "telefono": "+5492995550136",
+    "email": "martina.godoy.36@example.com",
+    "obraSocial": "OS Valle Demo (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-038",
+    "nombre": "Iñaki Carrizo",
+    "telefono": "+5492995550137",
+    "email": "inaki.carrizo.37@example.com",
+    "obraSocial": "OS Valle Demo (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-039",
+    "nombre": "Andrés Peña",
+    "telefono": "+5492995550138",
+    "email": "andres.pena.38@example.com",
+    "obraSocial": "Salud Confluencia (ficticia)",
+    "optInWhatsapp": true
+  },
+  {
+    "id": "pac-040",
+    "nombre": "Nicolás Benítez",
+    "telefono": "+5492995550139",
+    "email": "nicolas.benitez.39@example.com",
+    "obraSocial": "Particular",
+    "optInWhatsapp": true
+  }
+]

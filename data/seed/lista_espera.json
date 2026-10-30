@@ -1,0 +1,59 @@
+[
+  {
+    "id": "esp-001",
+    "pacienteId": "pac-035",
+    "prestacionId": "limpieza",
+    "profesionalId": "prof-ibanez",
+    "desde": "2026-11-02",
+    "hasta": "2026-11-14",
+    "creadoEn": "2026-10-27T13:00:00.000Z",
+    "estado": "esperando"
+  },
+  {
+    "id": "esp-002",
+    "pacienteId": "pac-022",
+    "prestacionId": "consulta",
+    "desde": "2026-11-02",
+    "hasta": "2026-11-14",
+    "creadoEn": "2026-10-27T20:00:00.000Z",
+    "estado": "esperando"
+  },
+  {
+    "id": "esp-003",
+    "pacienteId": "pac-010",
+    "prestacionId": "consulta",
+    "profesionalId": "prof-ferreyra",
+    "desde": "2026-11-02",
+    "hasta": "2026-11-14",
+    "creadoEn": "2026-10-28T03:00:00.000Z",
+    "estado": "esperando"
+  },
+  {
+    "id": "esp-004",
+    "pacienteId": "pac-007",
+    "prestacionId": "consulta",
+    "desde": "2026-11-02",
+    "hasta": "2026-11-14",
+    "creadoEn": "2026-10-28T10:00:00.000Z",
+    "estado": "esperando"
+  },
+  {
+    "id": "esp-005",
+    "pacienteId": "pac-035",
+    "prestacionId": "limpieza",
+    "desde": "2026-11-02",
+    "hasta": "2026-11-14",
+    "creadoEn": "2026-10-28T17:00:00.000Z",
+    "estado": "esperando"
+  },
+  {
+    "id": "esp-006",
+    "pacienteId": "pac-028",
+    "prestacionId": "limpieza",
+    "profesionalId": "prof-ibanez",
+    "desde": "2026-11-02",
+    "hasta": "2026-11-14",
+    "creadoEn": "2026-10-29T00:00:00.000Z",
+    "estado": "esperando"
+  }
+]

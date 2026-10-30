@@ -1,0 +1,36 @@
+[
+  {
+    "id": "prof-ferreyra",
+    "nombre": "Dra. Lucía Ferreyra",
+    "matriculaFicticia": "MP-0000-FICT",
+    "prestaciones": [
+      "consulta",
+      "limpieza",
+      "arreglo",
+      "blanqueamiento",
+      "urgencia"
+    ]
+  },
+  {
+    "id": "prof-quintana",
+    "nombre": "Dr. Martín Quintana",
+    "matriculaFicticia": "MP-0001-FICT",
+    "prestaciones": [
+      "consulta",
+      "arreglo",
+      "extraccion",
+      "conducto",
+      "urgencia"
+    ]
+  },
+  {
+    "id": "prof-ibanez",
+    "nombre": "Dra. Sofía Ibáñez",
+    "matriculaFicticia": "MP-0002-FICT",
+    "prestaciones": [
+      "consulta",
+      "limpieza",
+      "ortodoncia"
+    ]
+  }
+]

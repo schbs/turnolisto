@@ -1,0 +1,31 @@
+{
+  "nombre": "pide-humano",
+  "descripcion": "Pide hablar con una persona: deriva sin pasar por la IA y el bot se calla",
+  "telefono": "5492995550115",
+  "nombre_perfil": "Lucía",
+  "ahora": "2026-11-02 08:00",
+  "pasos": [
+    {
+      "usuario": {
+        "texto": "Quiero hablar con una persona, por favor"
+      },
+      "espera": {
+        "handoff": "pedido_del_paciente",
+        "sin_modelo": true
+      }
+    },
+    {
+      "usuario": {
+        "texto": "¿Hola?"
+      },
+      "espera": {
+        "sin_respuesta": true,
+        "ignorado": "pausado"
+      }
+    }
+  ],
+  "al_final": {
+    "handoffs": 1,
+    "salientes_al_paciente": 1
+  }
+}

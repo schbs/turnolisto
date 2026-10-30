@@ -1,0 +1,38 @@
+{
+  "nombre": "duplicado",
+  "descripcion": "Meta entrega el mismo mensaje dos veces: se responde una sola",
+  "telefono": "5492995550102",
+  "nombre_perfil": "Tomás",
+  "ahora": "2026-11-02 08:00",
+  "pasos": [
+    {
+      "usuario": {
+        "texto": "Hola, ¿qué días y horarios atienden?"
+      },
+      "id_mensaje": "wamid.DUPLICADO",
+      "espera": {
+        "herramientas": [
+          "info_clinica"
+        ],
+        "incluye": [
+          "sábado",
+          "sabados"
+        ]
+      }
+    },
+    {
+      "usuario": {
+        "texto": "Hola, ¿qué días y horarios atienden?"
+      },
+      "id_mensaje": "wamid.DUPLICADO",
+      "espera": {
+        "sin_respuesta": true,
+        "ignorado": "duplicado",
+        "sin_modelo": true
+      }
+    }
+  ],
+  "al_final": {
+    "salientes_al_paciente": 1
+  }
+}

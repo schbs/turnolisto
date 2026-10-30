@@ -1,0 +1,77 @@
+{
+  "modelo": "gemini-3.5-flash-lite",
+  "versionPrompt": "2026-10-30.1",
+  "grabadoEl": "2026-10-30T18:50:33.264Z",
+  "respuestas": [
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "responder",
+              "args": {
+                "entendio": true,
+                "texto": "Hola Julieta, ¿confirmás que querés cancelar tu turno para limpieza dental el jueves 5/11 a las 14:15 con la Dra. Sofía Ibáñez? 🦷",
+                "tema": "turnos"
+              },
+              "id": "call_741829"
+            },
+            "thoughtSignature": "EmAKXgFpFH0T23oxGokYVVQvlFHxtrWaQSWrk1n3i0nph5MJFiE81n4OtPuxITtwP2qBVcFuH9fgU8SVHrCC6OKHoA6scSZY1puR+CM0BVYuZdmq9s7yF6gZIKsN6Ait7xg="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2498,
+        "salida": 68,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "cancelar_turno",
+              "args": {
+                "turno_id": "tur-007"
+              },
+              "id": "call_1021677"
+            },
+            "thoughtSignature": "EmAKXgFpFH0T73DSKYW0ZyBPEur076WzCZkB8uLBNCBrPpPXAKz3b3DOrzatiRh6Pc4bVQNholhoJEK6aLyMN7Bh7rrRte2aSIfK26xUVwBp7DzY0C1VZVT8z0PYaLQ49MM="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2549,
+        "salida": 23,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "responder",
+              "args": {
+                "texto": "Listo, Julieta, ya cancelé tu turno del jueves 5/11. Avisanos si querés reprogramarlo para otro momento. 😊",
+                "tema": "turnos",
+                "entendio": true
+              },
+              "id": "call_1040176"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TfYgUkskNXPvHMfb6h6SZTWvd/49AW/UXaZaGmIvxUDuQ2Z0O5ZJKvyh+BRkfn+BxECfC449hAuygfgw1DxoZUpZHWuCPAeNqmA3ZY3HZGejFsJzkOAhVeLc="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2664,
+        "salida": 55,
+        "pensamiento": 0
+      }
+    }
+  ]
+}

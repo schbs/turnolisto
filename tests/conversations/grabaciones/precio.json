@@ -1,0 +1,53 @@
+{
+  "modelo": "gemini-3.5-flash-lite",
+  "versionPrompt": "2026-10-30.1",
+  "grabadoEl": "2026-10-30T18:50:46.063Z",
+  "respuestas": [
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "info_clinica",
+              "args": {
+                "tema": "precios"
+              },
+              "id": "call_722572"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TFrYVirPYSkaD4DatnNh2Bh9hL76AL1QYnnHqFjG2NpFYo+8QIyBQwiRuMakosyoEubwR0hjTdUPxBQnJT4SELO1IBmzZTVulk0vBJw8BbK59+FaVUuhBwj8="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2437,
+        "salida": 18,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "responder",
+              "args": {
+                "tema": "info",
+                "entendio": true,
+                "texto": "El blanqueamiento dental sale $150.000 para pacientes particulares, aunque el valor final se confirma en el consultorio. ¿Querés que te reserve un turno para eso? 😊"
+              },
+              "id": "call_1037638"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TZAz2I1fydrg8viUCnC65N49gQ6y0zs1RynuQ8G/QTF9PsIsQ9WRISvu0UFhMaucUA35di5lXSpZBnfUmT9Gleqn+xDrvHPtMlDbDVrQ42mpwinFvIb7LSRI="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2595,
+        "salida": 65,
+        "pensamiento": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "nombre": "reprogramar-boton",
+  "descripcion": "Toca Reprogramar en el recordatorio y elige otro día",
+  "telefono": "5492995550129",
+  "nombre_perfil": "Germán",
+  "ahora": "2026-11-02 08:00",
+  "pasos": [
+    {
+      "usuario": {
+        "boton": "reprogramar|tur-009",
+        "titulo": "Reprogramar"
+      },
+      "espera": {
+        "sin_modelo": true
+      }
+    },
+    {
+      "usuario": {
+        "texto": "El lunes 9 a la tarde"
+      },
+      "espera": {
+        "herramientas": [
+          "buscar_slots"
+        ]
+      }
+    },
+    {
+      "usuario": {
+        "texto": "A las 14:00"
+      },
+      "espera": {
+        "herramientas": [
+          "reprogramar_turno"
+        ]
+      }
+    }
+  ],
+  "al_final": {
+    "turno_movido": {
+      "id": "tur-009",
+      "inicio": "2026-11-09T14:00"
+    },
+    "handoffs": 0
+  }
+}

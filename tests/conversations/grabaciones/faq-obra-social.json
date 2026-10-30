@@ -1,0 +1,53 @@
+{
+  "modelo": "gemini-3.5-flash-lite",
+  "versionPrompt": "2026-10-30.1",
+  "grabadoEl": "2026-10-30T18:50:39.328Z",
+  "respuestas": [
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "info_clinica",
+              "args": {
+                "tema": "obras_sociales"
+              },
+              "id": "call_403386"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TQIW5oO35PlJFaozaZw1B96vuPTyjrCKTtXVqOfFS61xI7yIMoJdGGiOes7bm8J0YWbp9R2ru5Ps/mB6XTXNVQNxn5dm1JkUe3hAImM/VcmfncbnkqDdxfTo="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2446,
+        "salida": 21,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "responder",
+              "args": {
+                "entendio": true,
+                "tema": "info",
+                "texto": "Sí, atendemos por Prepaga Limay. ¿Te gustaría que busquemos un turno? 🦷"
+              },
+              "id": "call_277954"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TRLCDIJbXTmFKNGg4RoeW4LebdGMwLpYmGtvLoaFGks8AYfuqo5RQiSGgUqfzwcLSbQkeWEZQhw1pPcgfIdamf4nDqf4RvhLqdXFJzKUXH+DdlPmWx+HNiPE="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2549,
+        "salida": 46,
+        "pensamiento": 0
+      }
+    }
+  ]
+}

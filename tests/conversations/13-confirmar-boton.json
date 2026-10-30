@@ -1,0 +1,25 @@
+{
+  "nombre": "confirmar-boton",
+  "descripcion": "Toca Confirmo en el recordatorio: se confirma sin IA",
+  "telefono": "5492995550133",
+  "nombre_perfil": "Matías",
+  "ahora": "2026-11-02 08:00",
+  "pasos": [
+    {
+      "usuario": {
+        "boton": "confirmar|tur-002",
+        "titulo": "Confirmo"
+      },
+      "espera": {
+        "sin_modelo": true,
+        "incluye": [
+          "confirmado"
+        ]
+      }
+    }
+  ],
+  "al_final": {
+    "turno_confirmado": "tur-002",
+    "handoffs": 0
+  }
+}

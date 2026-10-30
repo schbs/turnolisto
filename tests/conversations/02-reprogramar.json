@@ -1,0 +1,39 @@
+{
+  "nombre": "reprogramar",
+  "descripcion": "Paciente con turno el miércoles lo pasa al viernes a la mañana",
+  "telefono": "5492995550133",
+  "nombre_perfil": "Matías",
+  "ahora": "2026-11-02 08:00",
+  "pasos": [
+    {
+      "usuario": {
+        "texto": "Hola, necesito cambiar mi turno del miércoles, ¿puede ser el viernes a la mañana?"
+      },
+      "espera": {
+        "herramientas": [
+          "buscar_slots"
+        ],
+        "prohibidas": [
+          "cancelar_turno"
+        ]
+      }
+    },
+    {
+      "usuario": {
+        "texto": "El de las 10:00 está perfecto"
+      },
+      "espera": {
+        "herramientas": [
+          "reprogramar_turno"
+        ]
+      }
+    }
+  ],
+  "al_final": {
+    "turno_movido": {
+      "id": "tur-002",
+      "inicio": "2026-11-06T10:00"
+    },
+    "handoffs": 0
+  }
+}

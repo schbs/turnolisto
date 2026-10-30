@@ -1,0 +1,20 @@
+{
+  "fecha": "2026-10-30T20:14:56.334Z",
+  "metodo": "Lighthouse 12 móvil (throttling simulado) en Brave sin interfaz, build de producción local, mediana de 3 corridas",
+  "paginas": {
+    "/": {
+      "performance": 98,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpSegundos": 2.33
+    },
+    "/panel": {
+      "performance": 98,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpSegundos": 2.33
+    }
+  }
+}

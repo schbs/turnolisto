@@ -1,0 +1,103 @@
+{
+  "modelo": "gemini-3.5-flash-lite",
+  "versionPrompt": "2026-10-30.1",
+  "grabadoEl": "2026-10-30T18:50:22.636Z",
+  "respuestas": [
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "buscar_slots",
+              "args": {
+                "fecha": "2026-11-06",
+                "franja": "manana",
+                "prestacion_id": "consulta",
+                "profesional_id": "prof-quintana"
+              },
+              "id": "call_981570"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TAwuadgKXx5riGe7VS0wGeUi8ZJ7OTWeAkzcbp6eiNV+oanGrDnzLGK5NCMRQwGXQeDcuE2FGPAeZHAAx/QuO6MNpE7G+P0YQWBsHP8nm7EBdEaFVrFjvIdE="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2500,
+        "salida": 55,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "responder",
+              "args": {
+                "tema": "turnos",
+                "entendio": true,
+                "texto": "Para el viernes 6/11 a la mañana con el Dr. Martín Quintana tengo a las 09:00, 09:30 o 10:00. ¿Te sirve alguno de esos horarios para reprogramar? 🦷"
+              },
+              "id": "call_762101"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TNa1nGX64/Muc81MQWUshXFz4znvLtsVNor174p0PEP3E7LdXxlP7LI4I1eXJ49SKcHUDw5jIPW/I3hL7REiHnwb5o0VjjDrG5g03/d6axqF2IgSeuUwEo+E="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2642,
+        "salida": 79,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "reprogramar_turno",
+              "args": {
+                "turno_id": "tur-002",
+                "nuevo_inicio": "2026-11-06T10:00"
+              },
+              "id": "call_737848"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TDuYxCLeWb98DdJsGo6NGMlbzdyXNFCfsZa7jAgz0m7IndcqOS5uqYNI0Yu9padoMOdX6QmrRDQcyxqdIszDHAYJP2lzYOv4DIkI/3IkxHNbdh4RTm5nP03Q="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2567,
+        "salida": 47,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "responder",
+              "args": {
+                "texto": "Listo Matías, tu turno quedó reprogramado para el viernes 6 de noviembre a las 10:00 con el Dr. Martín Quintana. ¡Te esperamos! 🦷",
+                "entendio": true,
+                "tema": "turnos"
+              },
+              "id": "call_590280"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TC0BJX7+ZB5/QKBnDVzU4eUYZsWm7A85CPWHWKuC0a1yuKqosXXr0xKH/0eY/unvMo2nXZ4k7oZGlAdjUOdwVpFyGiwrP9F4pswjBjeq26u0XVArC3llK9R4="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2721,
+        "salida": 62,
+        "pensamiento": 0
+      }
+    }
+  ]
+}

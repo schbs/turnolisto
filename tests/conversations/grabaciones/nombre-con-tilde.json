@@ -1,0 +1,154 @@
+{
+  "modelo": "gemini-3.5-flash-lite",
+  "versionPrompt": "2026-10-30.1",
+  "grabadoEl": "2026-10-30T18:55:05.750Z",
+  "respuestas": [
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "buscar_slots",
+              "args": {
+                "franja": "manana",
+                "hora_preferida": "11:00",
+                "prestacion_id": "limpieza",
+                "fecha": "2026-11-06"
+              },
+              "id": "call_1173049"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TW4gDhwFUridwRse1xTD6LfTEoL0bmAO1uojrrccfqsC85badvipGZwD/x15v/Lq8xPrvzFKYuX+GbulYU+36K4aID5pAEMqx5Cw7a/UBQ1CxwOs3pKWGAwA="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2463,
+        "salida": 56,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "reservar_turno",
+              "args": {
+                "prestacion_id": "limpieza",
+                "inicio": "2026-11-06T11:00",
+                "profesional_id": "prof-ferreyra",
+                "nombre_paciente": "Iñaki Núñez"
+              },
+              "id": "call_1131819"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TnBj5T7TQno2mH940lDKH/JPL2QXWvIk15kcirPM0S6nzrM1d0AJoKM9bxG/RIc5YaeG9XcSSfcV/D3h23ATz3h14YrIqKZGck2fzF7jzLjkrm3S/MWx1II4="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2674,
+        "salida": 68,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "responder",
+              "args": {
+                "texto": "¡Listo, Iñaki! Te agendé tu limpieza para el viernes 6 de noviembre a las 11:00 con la Dra. Lucía Ferreyra. ¡Te esperamos! 😊",
+                "entendio": true,
+                "tema": "turnos"
+              },
+              "id": "call_774937"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TptbL6/hcnyCh6ExXgGzeoxf79JUyaIwBegSPO2oxHLh3deXAvW8EFNo+nFLwmHG3Fa6aIm4c8xComn6fuw7/no8aTlIN75+U2TnNCipMccXh716QjKuNsEA="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2842,
+        "salida": 68,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "buscar_slots",
+              "args": {
+                "franja": "cualquiera",
+                "fecha": "2026-11-06",
+                "hora_preferida": "11:00",
+                "prestacion_id": "limpieza"
+              },
+              "id": "call_1246363"
+            },
+            "thoughtSignature": "EmAKXgFpFH0Tfbh8KPs53+beuI5cGuAQKXc5uQesiFIjidx907O6Kt/CJ+XaN/CN8n7TXIZXTrJWa9ASECeoLUqKemvwHb3MY96p5p/ofEP916VMEpW++oLMAyABM7RE8lc="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2550,
+        "salida": 56,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "reservar_turno",
+              "args": {
+                "profesional_id": "prof-ibanez",
+                "inicio": "2026-11-06T11:00",
+                "prestacion_id": "limpieza"
+              },
+              "id": "call_1152508"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TTfw2PIygXJB5TJhNF0haSw5ACTk7vny/nidMQ5+XPH8lqJVZp6tizHtVNql62BhN/dtMEnm/91kx+orP7ajM0NWxbiEE8daWc8oaWSCURFk4eqvr6ogmzQU="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2761,
+        "salida": 55,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "responder",
+              "args": {
+                "tema": "turnos",
+                "texto": "Iñaki, ya tenés reservado un turno para limpieza justo el viernes 6 a las 11:00 con la Dra. Ferreyra. ¿Querés que veamos otro horario o reprogramar el que ya tenés? 🦷",
+                "entendio": true
+              },
+              "id": "call_1100294"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TD+K0Apmjt64qv0mpeXPLu/+4SQzurz/j/ez22N2RnQyu6c0Et39s34F8KonBh6NfDzPtgu07tScdeg9g2MkYkk7o8rYgJ6KhJOYzUV9usnDjVpYavdrWgC0="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2858,
+        "salida": 77,
+        "pensamiento": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "nombre": "faq-obra-social",
+  "descripcion": "Pregunta si atienden por una obra social",
+  "telefono": "5492995550115",
+  "nombre_perfil": "Lucía",
+  "ahora": "2026-11-02 08:00",
+  "pasos": [
+    {
+      "usuario": {
+        "texto": "¿Atienden por Prepaga Limay?"
+      },
+      "espera": {
+        "herramientas": [
+          "info_clinica"
+        ],
+        "incluye": [
+          "Limay"
+        ]
+      }
+    }
+  ],
+  "al_final": {
+    "handoffs": 0
+  }
+}

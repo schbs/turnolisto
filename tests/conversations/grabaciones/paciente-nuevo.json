@@ -1,0 +1,130 @@
+{
+  "modelo": "gemini-3.5-flash-lite",
+  "versionPrompt": "2026-10-30.1",
+  "grabadoEl": "2026-10-30T18:52:41.667Z",
+  "respuestas": [
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "buscar_slots",
+              "args": {
+                "hora_preferida": "10:00",
+                "fecha": "2026-11-03",
+                "prestacion_id": "consulta",
+                "franja": "manana"
+              },
+              "id": "call_796525"
+            },
+            "thoughtSignature": "EmAKXgFpFH0T8rt6m098HtGhDShTt9vDY8ZUelNdHYcP0DVr0JTnOObvGtf1lGpV2SiaghtF09SfPVHMCEb2IPrJZSslWyxY4YaEI5Ro4bezs+oWrgurmPI3SqZ6NGDBFc0="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2455,
+        "salida": 55,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "responder",
+              "args": {
+                "entendio": true,
+                "texto": "¡Hola! Para mañana a las 10:00 tengo disponibilidad con la Dra. Lucía Ferreyra, el Dr. Martín Quintana y la Dra. Sofía Ibáñez. ¿Con cuál preferís agendar y cuál es tu nombre y apellido? 😊",
+                "tema": "turnos"
+              },
+              "id": "call_876520"
+            },
+            "thoughtSignature": "EmAKXgFpFH0THbREiBPaAg1NZ++zfiYM1wJt2LsDqMT/c/XtGsbQyyJpBs88OSm8HEktzpI1mG62KowrbXqVi02eh5GVEYWTPXTblHe4OsbB9KbLKYl3l1eCbv9kDYfVysg="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2724,
+        "salida": 81,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "buscar_slots",
+              "args": {
+                "hora_preferida": "10:00",
+                "prestacion_id": "consulta",
+                "franja": "manana",
+                "fecha": "2026-11-03"
+              },
+              "id": "call_949778"
+            },
+            "thoughtSignature": "EmAKXgFpFH0Ts/l81VAyce/ZKTqsVYrkcCyq24lwzR0Rk5YzgU+fpD+0qDi3CRRnxwoOKzeeJcS9hUypqWitLhVWhEGrDImFd+RXPqDOUeRwwZTjHJrYI8ldnWSOpvWFZc8="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2515,
+        "salida": 55,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "reservar_turno",
+              "args": {
+                "profesional_id": "prof-ferreyra",
+                "inicio": "2026-11-03T10:00",
+                "nombre_paciente": "Martina Ruiz",
+                "prestacion_id": "consulta"
+              },
+              "id": "call_580294"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TptlefISThoNvRyCEFfJ3wAkOzOo5hnK1FeyJ1haGMbyxqyVjySTpKbg0IVNL+zRVohxHEFTD9Uiy8ttQrauZNww49GEnOi9ZVgU3nwTQX5R3Z9WS2/Zg+L4="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2784,
+        "salida": 66,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "responder",
+              "args": {
+                "entendio": true,
+                "tema": "turnos",
+                "texto": "Listo Martina, quedas agendada para una consulta mañana martes a las 10:00 con la Dra. Lucía Ferreyra. ¡Te esperamos! 😊"
+              },
+              "id": "call_693278"
+            },
+            "thoughtSignature": "EmAKXgFpFH0Tnaxu1Z08cXghQzIZiFmX45cNdL0YXHI1hBSEP30MHseKfnl7lEU7MIg+ASnQaiFOaVvd0PBsWZV0n7N50mBqSPZ/SSyE45juACL8PXpTTuXPMr6pF3K1PqE="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2949,
+        "salida": 61,
+        "pensamiento": 0
+      }
+    }
+  ]
+}

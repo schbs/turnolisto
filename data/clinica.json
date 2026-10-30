@@ -1,0 +1,37 @@
+{
+  "aviso": "Clínica ficticia de demostración: todos los datos son inventados.",
+  "nombre": "Clínica Dental Confluencia",
+  "direccion": "Av. de las Confluencias 1234, Neuquén (dirección ficticia)",
+  "como_llegar": "A dos cuadras del centro. Hay estacionamiento medido en la cuadra.",
+  "horarios": "Lunes a viernes de 9 a 19 h y sábados de 9 a 13 h. Domingos y feriados cerrado.",
+  "telefono_recepcion": "+54 9 299 555-0198 (ficticio)",
+  "telefono_guardia": "+54 9 299 555-0199 (guardia odontológica ficticia, las 24 h)",
+  "obras_sociales": {
+    "aceptadas": ["Salud Confluencia (ficticia)", "Prepaga Limay (ficticia)", "OS Valle Demo (ficticia)"],
+    "detalle": "También atendemos de forma particular. Traé el carnet y el DNI. Algunas prácticas pueden requerir autorización previa de la obra social."
+  },
+  "precios": {
+    "aclaracion": "Precios de referencia para pacientes particulares, en pesos. El valor final lo confirma el profesional después de revisar.",
+    "lista": {
+      "consulta": 25000,
+      "limpieza": 38000,
+      "arreglo": 52000,
+      "extraccion": 60000,
+      "conducto": 180000,
+      "blanqueamiento": 150000,
+      "ortodoncia": 30000,
+      "urgencia": 35000
+    }
+  },
+  "medios_de_pago": "Efectivo, transferencia y tarjetas de débito y crédito.",
+  "politicas": {
+    "cancelacion": "Si no podés venir, avisá con al menos 24 h de anticipación así le damos el turno a otra persona.",
+    "demora": "Si llegás más de 15 minutos tarde puede que haya que reprogramar.",
+    "primera_vez": "Si es tu primera vez, llegá 10 minutos antes para completar la ficha."
+  },
+  "preparacion": {
+    "limpieza": "No hace falta preparación. Cepillate antes de venir.",
+    "extraccion": "Comé algo liviano antes y avisá si tomás anticoagulantes.",
+    "blanqueamiento": "Antes del blanqueamiento hace falta una consulta y una limpieza."
+  }
+}

@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* Paleta y tipografías de docs/brand.md (contraste medido allí). */
+@theme {
+  --color-crema: #fbf6ef;
+  --color-blanco: #ffffff;
+  --color-tinta: #1f2b2e;
+  --color-tinta-suave: #4a5a5e;
+  --color-menta-700: #0e6863;
+  --color-menta-800: #0a4f4b;
+  --color-menta-50: #e3f1ee;
+  --color-coral-700: #a3412a;
+  --color-coral-50: #fceae3;
+  --color-coral-400: #e8826a;
+  --color-borde: #857a6e;
+  --color-linea: #e6ddd2;
+  --color-foco: #0b4f7a;
+
+  /* Estados del turno: siempre con texto e ícono. */
+  --color-reservado: #8a5a00;
+  --color-reservado-fondo: #fff4d6;
+  --color-confirmado: #1e6b3a;
+  --color-confirmado-fondo: #e4f4e8;
+  --color-cancelado: #555555;
+  --color-cancelado-fondo: #eeeeee;
+  --color-ausente: #a11e1e;
+  --color-ausente-fondo: #fbe6e6;
+
+  --font-titulo: var(--font-lexend);
+  --font-sans: var(--font-atkinson);
+
+  --radius-ticket: 1.25rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-foco);
+  outline-offset: 2px;
+}
+
+/* Borde punteado del "ticket de turno", la pieza central de la marca. */
+.ticket {
+  background-image: radial-gradient(circle at 0 50%, var(--color-crema) 0.75rem, transparent 0.8rem),
+    radial-gradient(circle at 100% 50%, var(--color-crema) 0.75rem, transparent 0.8rem);
+}
+

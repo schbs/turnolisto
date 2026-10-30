@@ -1,0 +1,23 @@
+{
+  "nombre": "lista-espera",
+  "descripcion": "Pide que lo anoten en la lista de espera",
+  "telefono": "5492995550115",
+  "nombre_perfil": "Lucía",
+  "ahora": "2026-11-02 08:00",
+  "pasos": [
+    {
+      "usuario": {
+        "texto": "Anotame en la lista de espera para una limpieza esta semana, por si se libera algo antes del viernes"
+      },
+      "espera": {
+        "herramientas": [
+          "anotar_lista_espera"
+        ]
+      }
+    }
+  ],
+  "al_final": {
+    "lista_espera_nuevas": 1,
+    "handoffs": 0
+  }
+}

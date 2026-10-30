@@ -1,0 +1,29 @@
+{
+  "nombre": "nombre-con-tilde",
+  "descripcion": "Paciente nuevo con ñ y tildes: se guarda tal cual",
+  "telefono": "5492995550187",
+  "nombre_perfil": "Iñaki",
+  "ahora": "2026-11-02 08:00",
+  "pasos": [
+    {
+      "usuario": {
+        "texto": "Hola! Soy Iñaki Núñez, quiero una limpieza el viernes 6 a las 11"
+      },
+      "espera": {}
+    },
+    {
+      "usuario": {
+        "texto": "Sí, con cualquiera de las dos está bien, confirmámelo"
+      },
+      "espera": {}
+    }
+  ],
+  "al_final": {
+    "paciente_nuevo": "Iñaki Núñez",
+    "turno_nuevo": {
+      "prestacion": "limpieza",
+      "inicio": "2026-11-06T11:00"
+    },
+    "eventos_calendario": 1
+  }
+}

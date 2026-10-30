@@ -1,0 +1,26 @@
+[
+  {
+    "telefono": "+5492995550104",
+    "pacienteId": "pac-005",
+    "motivo": "otro",
+    "resumen": "Pregunta si la obra social le cubre el arreglo que le hicieron la semana pasada.",
+    "estado": "pendiente",
+    "creadoEn": "2026-10-30T13:12:00.000Z"
+  },
+  {
+    "telefono": "+5492995550108",
+    "pacienteId": "pac-009",
+    "motivo": "pedido_del_paciente",
+    "resumen": "Quiere hablar con alguien por un presupuesto de ortodoncia.",
+    "estado": "pendiente",
+    "creadoEn": "2026-10-30T14:40:00.000Z"
+  },
+  {
+    "telefono": "+5492995550112",
+    "pacienteId": "pac-013",
+    "motivo": "urgencia",
+    "resumen": "Dolor fuerte en una muela; se le pasó el teléfono de guardia.",
+    "estado": "resuelto",
+    "creadoEn": "2026-10-29T22:05:00.000Z"
+  }
+]

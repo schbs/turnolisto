@@ -1,0 +1,42 @@
+{
+  "nombre": "reservar",
+  "descripcion": "Paciente registrado pide una limpieza el jueves a la tarde y elige un horario",
+  "telefono": "5492995550102",
+  "nombre_perfil": "Tomás",
+  "ahora": "2026-11-02 08:00",
+  "pasos": [
+    {
+      "usuario": {
+        "texto": "Hola! Quería sacar turno para una limpieza el jueves a la tarde"
+      },
+      "espera": {
+        "herramientas": [
+          "buscar_slots"
+        ],
+        "prohibidas": [
+          "reservar_turno"
+        ],
+        "interactivo": "lista"
+      }
+    },
+    {
+      "usuario": {
+        "texto": "Dale, el de las 15:00 con la Dra. Ibáñez"
+      },
+      "espera": {
+        "herramientas": [
+          "reservar_turno"
+        ]
+      }
+    }
+  ],
+  "al_final": {
+    "turno_nuevo": {
+      "prestacion": "limpieza",
+      "inicio": "2026-11-05T15:00",
+      "profesional": "prof-ibanez"
+    },
+    "eventos_calendario": 1,
+    "handoffs": 0
+  }
+}

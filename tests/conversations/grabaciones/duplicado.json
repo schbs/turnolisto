@@ -1,0 +1,53 @@
+{
+  "modelo": "gemini-3.5-flash-lite",
+  "versionPrompt": "2026-10-30.1",
+  "grabadoEl": "2026-10-30T18:50:59.913Z",
+  "respuestas": [
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "info_clinica",
+              "args": {
+                "tema": "horarios"
+              },
+              "id": "call_555246"
+            },
+            "thoughtSignature": "EmAKXgFpFH0T4hJxpIAH93mjmgNpfceKypx3uKHVfqRXoOfopkpq2CyLv7USmrObXPTE6d6R9mJa3vdcIZol6KItujC7doT0MBLtgENrpdER3QjBUCqZOQ0JzFp8k1dkcvY="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2439,
+        "salida": 18,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "responder",
+              "args": {
+                "tema": "info",
+                "texto": "Atendemos de lunes a viernes de 9 a 19 h y los sábados de 9 a 13 h. ¿Querés que te reservemos un turno?🦷",
+                "entendio": true
+              },
+              "id": "call_1276283"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TB0R4NiZpysktNvHCNNgzUjLT6wcc9EW2aRzObyLvywVTTjKkF+GYDMgGsayB60L02H9Ptz7TlDXmhkBOiz2gB5Hq8oHYqEsSVQUB1kdSGgh7i2CZ8WxTiCo="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2503,
+        "salida": 63,
+        "pensamiento": 0
+      }
+    }
+  ]
+}

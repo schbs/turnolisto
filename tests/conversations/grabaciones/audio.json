@@ -1,0 +1,55 @@
+{
+  "modelo": "gemini-3.5-flash-lite",
+  "versionPrompt": "2026-10-30.1",
+  "grabadoEl": "2026-10-30T18:50:51.785Z",
+  "respuestas": [
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "buscar_slots",
+              "args": {
+                "franja": "manana",
+                "prestacion_id": "consulta",
+                "fecha": "2026-11-03"
+              },
+              "id": "call_997868"
+            },
+            "thoughtSignature": "EmAKXgFpFH0Tn1Hag2gIsrdJxa9D0VbGxwDV6Rl19EPcjDApKZVJ3EtsRkU0HY9YippT7U73Ks4PO3MvL9ILB44gNpkUTep8BcLqtBbmiJpCLI//MV1NpqD+C89vNyhVfUQ="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2501,
+        "salida": 42,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "responder",
+              "args": {
+                "tema": "turnos",
+                "texto": "Hola Simón! Mañana martes 3/11 a la mañana tenemos con la Dra. Lucía Ferreyra a las 09:00 o 09:30, o con la Dra. Sofía Ibáñez a las 09:00. ¿Te sirve alguno?🦷",
+                "entendio": true
+              },
+              "id": "call_1102120"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TCawWB2Hg29mVxgjWqXFDNMpdWp8Q/FwdZ2qEUqr200ayi9sYc2slXfhMyxcuHuHs5A8EIrJl49ZyUHci2I/CQRUHxmzNlDC1Gx/6RUoSaF40M4oQu1D9zWg="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2757,
+        "salida": 90,
+        "pensamiento": 0
+      }
+    }
+  ]
+}

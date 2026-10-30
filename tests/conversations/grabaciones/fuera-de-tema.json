@@ -1,0 +1,31 @@
+{
+  "modelo": "gemini-3.5-flash-lite",
+  "versionPrompt": "2026-10-30.1",
+  "grabadoEl": "2026-10-30T18:50:54.520Z",
+  "respuestas": [
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "responder",
+              "args": {
+                "entendio": true,
+                "tema": "fuera_de_tema",
+                "texto": "Hola Tomás, solo puedo ayudarte con turnos y consultas de la clínica dental. ¿Querés que agendemos algo? 🦷"
+              },
+              "id": "call_553545"
+            },
+            "thoughtSignature": "EmAKXgFpFH0T3hHLiyHlqn2HZ/AUG5cb6BoFPxVfLxVMU4MKkJRyYcBbPNpFzRSR0Gj6q0jgkYvlFkGIBbX3i56Y5G8sUpTfihcpEB0yEq3mQKG+p1u9LM+8dIwjY/GLf5g="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2442,
+        "salida": 56,
+        "pensamiento": 0
+      }
+    }
+  ]
+}

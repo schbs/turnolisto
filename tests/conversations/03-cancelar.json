@@ -1,0 +1,34 @@
+{
+  "nombre": "cancelar",
+  "descripcion": "Paciente cancela, confirma y el hueco se ofrece a la lista de espera",
+  "telefono": "5492995550123",
+  "nombre_perfil": "Juli",
+  "ahora": "2026-11-02 08:00",
+  "pasos": [
+    {
+      "usuario": {
+        "texto": "Hola, quiero cancelar mi turno del jueves, no voy a poder ir"
+      },
+      "espera": {
+        "prohibidas": [
+          "cancelar_turno"
+        ]
+      }
+    },
+    {
+      "usuario": {
+        "texto": "Sí, cancelalo por favor"
+      },
+      "espera": {
+        "herramientas": [
+          "cancelar_turno"
+        ]
+      }
+    }
+  ],
+  "al_final": {
+    "turno_cancelado": "tur-007",
+    "mensajes_a_terceros": 1,
+    "handoffs": 0
+  }
+}

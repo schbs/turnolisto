@@ -1,0 +1,103 @@
+{
+  "modelo": "gemini-3.5-flash-lite",
+  "versionPrompt": "2026-10-31.1",
+  "grabadoEl": "2026-10-30T22:31:18.146Z",
+  "respuestas": [
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "buscar_slots",
+              "args": {
+                "prestacion_id": "limpieza",
+                "fecha": "2026-11-05",
+                "franja": "tarde"
+              },
+              "id": "call_415892"
+            },
+            "thoughtSignature": "Ev8CCvwCAWkUfRMUKJBaSi679/K53vSeVLkvnksGHDl03bmVqwz6xUO9QtrasNM9Vtd3GHqJgxBotmLgUs7pjbXXQyICj98NltV44COWSy0jJAv176aWoRNIlG8WZWTMcSJWPMULGMHLLPBL9RtXTjGDpKyJcV761v6tkx3BLiE5M20Hzwpi5OvD2ozlRh8IQ4gwEZwjN1iipRBh2naG/S+wi9kpWyNU80Y91cI5Agng5LqOTmaefI40BPwD47EUsAbQRgMGKoJcNSwQTb1RdFGh30zkcBGctLHvB52p+jZF8JxULJ1wJFlBp6+mfEq7xnt5xLB10t5UUXgn4ZanTBS8GFQVPHBEbrOw0HsIA2oRNvoniHmfgdkLrVfNgdtgDWCQLDd+djwuG3PWdjqCH4a5nT/rxIZRF1DiH8Ytfdi2ja51/oyAdQ1ezHyN1vve3pAdYpELVEc3MpPbEk13TvjiUejVjYeXBY7OtW2nLVznJknHJuF15YMv9IKR/uFXWeQ="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2495,
+        "salida": 43,
+        "pensamiento": 103
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "responder",
+              "args": {
+                "texto": "On Thursday afternoon we have cleaning available with Dr. Lucía Ferreyra at 13:00, 13:30, 14:00 and 14:30, or with Dr. Sofía Ibáñez at 15:00, 15:30, 16:00 and 16:30. Which time and professional do you prefer? 🦷",
+                "tema": "turnos",
+                "entendio": true
+              },
+              "id": "call_969432"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TC6Ea6cljBTiuA4vvKZ/qx7sWuZ4fjMt7VNNHFf09Q8TOYEg+OkZs0DZ+xNF+GGiJ2bphWp4WwJDgb0dODdwrN7dSZ5pwlq9LQRKC61CgYH6Gk7s6MbTPVIA="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2797,
+        "salida": 117,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "reservar_turno",
+              "args": {
+                "prestacion_id": "limpieza",
+                "profesional_id": "prof-ibanez",
+                "inicio": "2026-11-05T15:00"
+              },
+              "id": "call_854804"
+            },
+            "thoughtSignature": "EmAKXgFpFH0Tn2KNSWFcth/wUrTrd/qMXTnZZ95Lug4fy9VZTDa/K4nsnC1xM154eHsMhm/BRcC6Ka+3eWlin1+Np0mbEa/pNeIZWXP6bHDhHrsUVP/1mTgkIMJosmZR3So="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2659,
+        "salida": 55,
+        "pensamiento": 0
+      }
+    },
+    {
+      "contenido": {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "responder",
+              "args": {
+                "entendio": true,
+                "texto": "Your cleaning is booked for Thursday, November 5 at 15:00 with Dr. Sofía Ibáñez. See you then! 🦷",
+                "tema": "turnos"
+              },
+              "id": "call_840913"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TU9gkxaN3nEbeOif4iYE9uxrVUEkGZavpbagRN+zYrCKl6LWsuAe3MCKmNbD8WNNGVXFaUODDpF0oaAKxGdpqFNP2pKBY0mGnnebVurMJrLHxwLQ5nA0KX2M="
+          }
+        ]
+      },
+      "uso": {
+        "entrada": 2814,
+        "salida": 57,
+        "pensamiento": 0
+      }
+    }
+  ]
+}

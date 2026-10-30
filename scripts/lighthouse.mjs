@@ -1,5 +1,5 @@
 // Lighthouse móvil (throttling simulado) sobre el build de producción local, con Brave sin interfaz.
-// Mide / y /panel (este con la sesión del usuario demo). Imprime los 4 puntajes y sale con error si alguno es < 90.
+// Mide / y /panel, y sus versiones en inglés /en y /en/panel (los paneles con la sesión del usuario demo). Imprime los 4 puntajes y sale con error si alguno es < 90.
 // Uso: npm run build && npm run lighthouse            (3 corridas por página, se informa la mediana por rendimiento)
 //      npm run lighthouse -- --corridas=1
 import { execFileSync, spawn } from "node:child_process";
@@ -79,6 +79,8 @@ try {
   const paginas = [
     ["/", null],
     ["/panel", { Cookie: cookie }],
+    ["/en", null],
+    ["/en/panel", { Cookie: cookie }],
   ];
   console.log(`Lighthouse móvil · ${corridas} corrida(s) por página · mediana por rendimiento`);
   console.log("página    rend  acces  b.práct  seo   LCP");
@@ -90,7 +92,7 @@ try {
     const ok = CATEGORIAS.every((c) => m[c] >= 90);
     fallo ||= !ok;
     console.log(
-      `${ruta.padEnd(9)} ${String(m.performance).padStart(4)}  ${String(m.accessibility).padStart(5)}  ${String(m["best-practices"]).padStart(7)}  ${String(m.seo).padStart(4)}  ${m.lcp} s  ${ok ? "✓" : "✗"}`,
+      `${ruta.padEnd(10)} ${String(m.performance).padStart(4)}  ${String(m.accessibility).padStart(5)}  ${String(m["best-practices"]).padStart(7)}  ${String(m.seo).padStart(4)}  ${m.lcp} s  ${ok ? "✓" : "✗"}`,
     );
     if (!m.url.endsWith(ruta)) { fallo = true; console.log(`          ✗ terminó en ${m.url}: no midió la página pedida`); }
     if (m.bajos.length) console.log(`          auditorías bajo 0,9: ${m.bajos.join(", ")}`);
@@ -110,5 +112,5 @@ writeFileSync(
     2,
   ) + "\n",
 );
-console.log(fallo ? "\n✗ Algún puntaje quedó por debajo de 90." : "\n✓ Los 4 puntajes ≥ 90 en las dos páginas.");
+console.log(fallo ? "\n✗ Algún puntaje quedó por debajo de 90." : "\n✓ Los 4 puntajes ≥ 90 en todas las páginas.");
 process.exit(fallo ? 1 : 0);

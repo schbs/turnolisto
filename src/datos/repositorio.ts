@@ -6,6 +6,7 @@ import profesionalesSeed from "../../data/seed/profesionales.json";
 import turnosSeed from "../../data/seed/turnos.json";
 import esperaSeed from "../../data/seed/lista_espera.json";
 import type { Agenda, EntradaEspera, Oferta, Prestacion, Profesional, TipoRecordatorio, Turno } from "@/domain/tipos";
+import type { Idioma } from "@/i18n/idioma";
 
 export interface Paciente {
   id: string;
@@ -26,6 +27,8 @@ export interface EstadoConversacion {
   pausado: boolean;
   /** Turno que el paciente pidió reprogramar con el botón del recordatorio. */
   reprogramando?: string;
+  /** Idioma en el que escribe el paciente (sin dato: español). */
+  idioma?: Idioma;
 }
 
 export type MotivoHandoff = "pedido_del_paciente" | "queja" | "urgencia" | "no_entiendo" | "otro";

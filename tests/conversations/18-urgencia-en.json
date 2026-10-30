@@ -1,0 +1,25 @@
+{
+  "nombre": "urgencia-en",
+  "descripcion": "Urgencia escrita en inglés: la regla fija deriva sin IA y contesta en inglés con el teléfono de guardia",
+  "telefono": "5492995550129",
+  "nombre_perfil": "Germán",
+  "ahora": "2026-11-02 08:00",
+  "pasos": [
+    {
+      "usuario": {
+        "texto": "I have a terrible toothache and my face is swollen"
+      },
+      "espera": {
+        "handoff": "urgencia",
+        "sin_modelo": true,
+        "incluye": [
+          "555-0199"
+        ],
+        "idioma": "en"
+      }
+    }
+  ],
+  "al_final": {
+    "handoffs": 1
+  }
+}

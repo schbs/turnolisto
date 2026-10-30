@@ -1,5 +1,6 @@
 // Bucle del agente: el modelo elige herramientas hasta llamar a "responder", que trae el mensaje final validado.
 import type { EstadoConversacion } from "@/datos/repositorio";
+import { TEXTOS_BOT } from "@/i18n/bot";
 import { declaraciones, ejecutarHerramienta, validarArgs, type ContextoHerramientas, type Respuesta } from "./herramientas";
 import type { Contenido, Modelo, Parte, Uso } from "./modelo";
 
@@ -79,7 +80,7 @@ export async function ejecutarAgente(opciones: {
   }
 
   return {
-    respuesta: { texto: "Perdón, se me complicó entenderte. ¿Me lo contás de otra forma?", entendio: false, tema: "otro" },
+    respuesta: { texto: TEXTOS_BOT[ctx.idioma ?? "es"].sinEntender, entendio: false, tema: "otro" },
     llamadasModelo: MAX_LLAMADAS,
     uso,
   };

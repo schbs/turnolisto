@@ -162,6 +162,7 @@ export class RepositorioSupabase implements Repositorio {
       fallos: fila.fallos as number,
       pausado: fila.pausado as boolean,
       ...(fila.reprogramando ? { reprogramando: fila.reprogramando as string } : {}),
+      ...(fila.idioma ? { idioma: fila.idioma as EstadoConversacion["idioma"] } : {}),
     };
   }
   async guardarConversacion(e: EstadoConversacion) {
@@ -172,6 +173,7 @@ export class RepositorioSupabase implements Repositorio {
         fallos: e.fallos,
         pausado: e.pausado,
         reprogramando: e.reprogramando ?? null,
+        idioma: e.idioma ?? null,
         actualizado_en: new Date().toISOString(),
       }),
       "guardar conversación",

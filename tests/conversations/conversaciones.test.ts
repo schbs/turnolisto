@@ -1,4 +1,4 @@
-// Las 16 conversaciones de negocio, repitiendo respuestas reales de Gemini grabadas con `npm run conversaciones:grabar`.
+// Las 18 conversaciones de negocio (16 en español y 2 en inglés), repitiendo respuestas reales de Gemini grabadas con `npm run conversaciones:grabar`.
 import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
@@ -8,8 +8,8 @@ import { cargarCasos, correrCaso, DIR_GRABACIONES } from "./correr";
 const casos = cargarCasos();
 
 describe("conversaciones", () => {
-  it("son 16 casos", () => {
-    expect(casos).toHaveLength(16);
+  it("son 18 casos", () => {
+    expect(casos).toHaveLength(18);
   });
 
   for (const caso of casos) {

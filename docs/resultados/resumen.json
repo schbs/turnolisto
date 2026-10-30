@@ -1,16 +1,16 @@
 {
-  "fecha": "2026-10-30T20:22:55.445Z",
+  "fecha": "2026-10-30T22:41:57.775Z",
   "tests": {
-    "total": 97,
-    "ok": 97,
-    "conversaciones": "16/16"
+    "total": 119,
+    "ok": 119,
+    "conversaciones": "18/18"
   },
   "e2e": {
-    "ok": 11,
+    "ok": 13,
     "fallidos": 0
   },
   "axe": {
-    "paginas": 6,
+    "paginas": 9,
     "violacionesGraves": 0,
     "violaciones": 0
   },
@@ -23,6 +23,20 @@
       "lcpSegundos": 2.33
     },
     "/panel": {
+      "performance": 98,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpSegundos": 2.33
+    },
+    "/en": {
+      "performance": 98,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpSegundos": 2.33
+    },
+    "/en/panel": {
       "performance": 98,
       "accessibility": 100,
       "bestPractices": 100,

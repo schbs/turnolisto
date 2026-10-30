@@ -1,5 +1,4 @@
 // Qué hace el bot con cada mensaje entrante: deduplica, transcribe, aplica reglas fijas, botones y, si hace falta, el agente.
-import clinica from "../../data/clinica.json";
 import { ejecutarAgente } from "@/agent/agente";
 import { turnosActivosDe, type ContextoHerramientas, type DepsHerramientas } from "@/agent/herramientas";
 import type { Modelo, Uso } from "@/agent/modelo";
@@ -9,6 +8,8 @@ import type { EstadoConversacion, MotivoHandoff, Paciente } from "@/datos/reposi
 import { confirmar, reservar } from "@/domain/agenda";
 import { desdeLocal, fechaLegible } from "@/domain/formato";
 import { normalizarTelefonoAR } from "@/domain/telefono";
+import { nombrePrestacion, TEXTOS_BOT } from "@/i18n/bot";
+import { detectarIdioma, type Idioma } from "@/i18n/idioma";
 import type { MensajeSaliente } from "@/whatsapp/mensajero";
 import type { MensajeEntrante } from "@/whatsapp/webhook";
 import { esUrgencia, pideHumano } from "./reglas";
@@ -32,19 +33,6 @@ export interface ResultadoProceso {
 
 const HISTORIAL_MAX = 12;
 
-const TEXTOS = {
-  audioIlegible: "No pude escuchar bien el audio 🙏 ¿Me lo escribís?",
-  tipoNoSoportado: "Por ahora solo puedo leer mensajes de texto y notas de voz. ¿Me lo escribís?",
-  urgencia: `Lamento mucho el dolor. Ya le aviso a recepción para que te atiendan lo antes posible; si es urgente, llamá ahora a la guardia: ${clinica.telefono_guardia}.`,
-  humano: "¡Claro! Le paso tu consulta a recepción y una persona te escribe por acá a la brevedad.",
-  noEntiendo: "Perdón, no te estoy entendiendo bien. Le paso la conversación a recepción para que te ayuden.",
-  fallaTecnica: "Perdón, tuve un problema técnico y no pude procesar tu mensaje. Ya le aviso a recepción para que te responda por acá.",
-  reprogramarPregunta: "Dale, lo cambiamos. ¿Qué día y en qué horario te queda mejor?",
-  turnoInactivo: "Ese turno ya no está activo. Si querés, te ayudo a sacar uno nuevo.",
-  ofertaVencida: "Uy, ese turno ya no está disponible. Te sigo avisando si se libera otro.",
-  ofertaRechazada: "¡Listo! Seguís en la lista de espera y te aviso si se libera otro horario.",
-};
-
 const nombreDe = (lista: { id: string; nombre: string }[], id: string) => lista.find((x) => x.id === id)?.nombre ?? id;
 
 export async function procesarMensaje(m: MensajeEntrante, deps: DepsBot): Promise<ResultadoProceso> {
@@ -58,6 +46,11 @@ export async function procesarMensaje(m: MensajeEntrante, deps: DepsBot): Promis
   const telefono = normalizarTelefonoAR(m.de) ?? `+${m.de}`;
   const estado = await repo.conversacion(telefono);
   let paciente = await repo.pacientePorTelefono(telefono);
+  // El idioma lo marca el último mensaje que alcanza para decidir; si no alcanza (un "ok", un botón), sigue el de antes.
+  const textos = () => TEXTOS_BOT[estado.idioma ?? "es"];
+  const detectar = (t: string) => {
+    estado.idioma = detectarIdioma(t) ?? estado.idioma;
+  };
 
   const enviar = async (texto: string, extra: Partial<MensajeSaliente> = {}) => {
     const salida: MensajeSaliente = { para: m.de, texto, ...extra };
@@ -81,15 +74,18 @@ export async function procesarMensaje(m: MensajeEntrante, deps: DepsBot): Promis
 
   // 1. Pasar todo a texto (o resolver el botón sin IA).
   let texto: string;
-  if (m.tipo === "texto") texto = m.texto;
-  else if (m.tipo === "audio") {
+  if (m.tipo === "texto") {
+    texto = m.texto;
+    detectar(texto);
+  } else if (m.tipo === "audio") {
     const transcripcion = await deps.transcriptor.transcribir(m.mediaId);
     await repo.registrarMensaje({ telefono, direccion: "entrante", tipo: "audio", texto: transcripcion ?? "(audio sin transcribir)", creadoEn: deps.ahora() });
     if (!transcripcion) {
-      if (!estado.pausado) await enviar(TEXTOS.audioIlegible);
+      if (!estado.pausado) await enviar(textos().audioIlegible);
       return cerrar("(audio)");
     }
     texto = transcripcion;
+    detectar(texto);
   } else if (m.tipo === "boton") {
     const [accion, ...resto] = m.idRespuesta.split("|");
     if (accion === "slot") {
@@ -101,13 +97,13 @@ export async function procesarMensaje(m: MensajeEntrante, deps: DepsBot): Promis
     } else {
       await repo.registrarMensaje({ telefono, direccion: "entrante", tipo: "boton", texto: m.titulo, creadoEn: deps.ahora() });
       if (estado.pausado) return cerrar(m.titulo);
-      const respuesta = await resolverBoton(accion, resto[0] ?? "", { deps, paciente, estado });
+      const respuesta = await resolverBoton(accion, resto[0] ?? "", { deps, paciente, estado, idioma: estado.idioma ?? "es" });
       await enviar(respuesta);
       return cerrar(m.titulo, respuesta);
     }
   } else {
     await repo.registrarMensaje({ telefono, direccion: "entrante", tipo: m.tipoOriginal, texto: `(${m.tipoOriginal})`, creadoEn: deps.ahora() });
-    if (!estado.pausado) await enviar(TEXTOS.tipoNoSoportado);
+    if (!estado.pausado) await enviar(textos().tipoNoSoportado);
     return cerrar(`(${m.tipoOriginal})`);
   }
 
@@ -119,22 +115,24 @@ export async function procesarMensaje(m: MensajeEntrante, deps: DepsBot): Promis
   // 3. Reglas fijas: urgencia y pedido de una persona.
   if (esUrgencia(texto)) {
     await derivar("urgencia", texto.slice(0, 300));
-    const salida = await enviar(TEXTOS.urgencia);
+    const salida = await enviar(textos().urgencia);
     return cerrar(texto, salida.texto);
   }
   if (pideHumano(texto)) {
     await derivar("pedido_del_paciente", texto.slice(0, 300));
-    const salida = await enviar(TEXTOS.humano);
+    const salida = await enviar(textos().humano);
     return cerrar(texto, salida.texto);
   }
 
   // 4. El agente.
   const agenda = await repo.agenda();
   const turnosDelPaciente = paciente ? turnosActivosDe(agenda.turnos, paciente.id, deps.ahora()) : [];
-  const ctx: ContextoHerramientas = { deps, telefono, paciente, herramientasUsadas: [] };
+  const idioma = estado.idioma ?? "es";
+  const ctx: ContextoHerramientas = { deps, telefono, paciente, herramientasUsadas: [], idioma };
   const sistema = construirSistema({
     ahora: deps.ahora(),
     zona: deps.config.zona,
+    idioma,
     paciente,
     nombrePerfil: m.nombrePerfil,
     turnosDelPaciente,
@@ -149,7 +147,7 @@ export async function procesarMensaje(m: MensajeEntrante, deps: DepsBot): Promis
     // Sin IA (cupo agotado, caída): el paciente igual recibe respuesta y recepción se entera.
     console.error("[turnolisto] el agente no pudo responder:", e instanceof Error ? e.message : e);
     await derivar("otro", `El asistente no pudo responder por una falla técnica. Mensaje: "${texto.slice(0, 200)}"`);
-    const salida = await enviar(TEXTOS.fallaTecnica);
+    const salida = await enviar(textos().fallaTecnica);
     return cerrar(texto, salida.texto);
   }
   paciente = ctx.paciente;
@@ -164,7 +162,7 @@ export async function procesarMensaje(m: MensajeEntrante, deps: DepsBot): Promis
     estado.fallos += 1;
     if (estado.fallos >= 2) {
       await derivar("no_entiendo", `El asistente no entendió dos mensajes seguidos. Último: "${texto.slice(0, 200)}"`);
-      respuesta = TEXTOS.noEntiendo;
+      respuesta = textos().noEntiendo;
     }
   } else {
     estado.fallos = 0;
@@ -178,10 +176,12 @@ export async function procesarMensaje(m: MensajeEntrante, deps: DepsBot): Promis
 async function resolverBoton(
   accion: string,
   id: string,
-  { deps, paciente, estado }: { deps: DepsBot; paciente: Paciente | null; estado: EstadoConversacion },
+  { deps, paciente, estado, idioma }: { deps: DepsBot; paciente: Paciente | null; estado: EstadoConversacion; idioma: Idioma },
 ): Promise<string> {
   const { repo, config } = deps;
   const agenda = await repo.agenda();
+  const TEXTOS = TEXTOS_BOT[idioma];
+  const prestacionDe = (id: string) => nombrePrestacion(id, nombreDe(repo.prestaciones(), id), idioma);
 
   if (accion === "confirmar" || accion === "reprogramar") {
     const turno = agenda.turnos.find((t) => t.id === id && t.pacienteId === paciente?.id);
@@ -193,7 +193,7 @@ async function resolverBoton(
     const r = confirmar(agenda, turno.id);
     if (!r.ok) return TEXTOS.turnoInactivo;
     await repo.guardarAgenda(r.agenda);
-    return `¡Gracias! Tu turno de ${nombreDe(repo.prestaciones(), turno.prestacionId).toLowerCase()} del ${fechaLegible(turno.inicio, config.zona)} quedó confirmado. Te esperamos 😊`;
+    return TEXTOS.confirmado(prestacionDe(turno.prestacionId), fechaLegible(turno.inicio, config.zona, idioma));
   }
 
   if (accion === "espera_si" || accion === "espera_no") {
@@ -216,9 +216,9 @@ async function resolverBoton(
       fin: r.turno.fin,
     });
     await repo.guardarEventoDeTurno(turnoId, eventoId);
-    return `¡Listo! Te quedó el turno de ${prestacion.nombre.toLowerCase()} el ${fechaLegible(r.turno.inicio, config.zona)} con ${nombreDe(repo.profesionales(), oferta.profesionalId)}.`;
+    return TEXTOS.asignado(prestacionDe(prestacion.id), fechaLegible(r.turno.inicio, config.zona, idioma), nombreDe(repo.profesionales(), oferta.profesionalId));
   }
 
-  return "No entendí esa opción. ¿Me contás qué necesitás?";
+  return TEXTOS.opcionDesconocida;
 }
 

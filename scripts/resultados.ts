@@ -26,6 +26,9 @@ const vitest = JSON.parse(fs.readFileSync(vitestJson, "utf8")) as {
   testResults: { name: string; assertionResults: { status: string }[] }[];
 };
 const conversaciones = vitest.testResults.find((r) => r.name.replaceAll("\\", "/").includes("tests/conversations/"))!;
+// Un test por caso más uno que cuenta los casos.
+const casos = conversaciones.assertionResults.slice(1);
+const casosOk = casos.filter((a) => a.status === "passed").length;
 
 const e2eJson = path.join(tmp, "e2e.json");
 npx(["playwright", "test", "--reporter=json"], { PLAYWRIGHT_JSON_OUTPUT_NAME: e2eJson });
@@ -52,7 +55,7 @@ const bench = leer<{
 
 const resumen = {
   fecha: new Date().toISOString(),
-  tests: { total: vitest.numTotalTests, ok: vitest.numPassedTests, conversaciones: `${conversaciones.assertionResults.filter((a) => a.status === "passed").length - 1}/16` },
+  tests: { total: vitest.numTotalTests, ok: vitest.numPassedTests, conversaciones: `${casosOk}/${casos.length}` },
   e2e: { ok: e2e.stats.expected, fallidos: e2e.stats.unexpected + e2e.stats.flaky },
   axe: { paginas: axe.length, violacionesGraves: axe.reduce((t, a) => t + a.graves, 0), violaciones: axe.reduce((t, a) => t + a.violaciones, 0) },
   lighthouse: lighthouse.paginas,

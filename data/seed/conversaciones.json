@@ -1,7 +1,23 @@
 [
   {
+    "telefono": "+5492995550116",
+    "pausado": true,
+    "idioma": "en",
+    "historial": [
+      {
+        "rol": "usuario",
+        "texto": "Hi, could I talk to someone about the cost of a root canal before I book?"
+      },
+      {
+        "rol": "asistente",
+        "texto": "Of course! I'm passing your message to the front desk and someone will write to you here shortly."
+      }
+    ]
+  },
+  {
     "telefono": "+5492995550104",
     "pausado": true,
+    "idioma": "es",
     "historial": [
       {
         "rol": "usuario",
@@ -16,6 +32,7 @@
   {
     "telefono": "+5492995550108",
     "pausado": true,
+    "idioma": "es",
     "historial": [
       {
         "rol": "usuario",
@@ -30,6 +47,7 @@
   {
     "telefono": "+5492995550112",
     "pausado": false,
+    "idioma": "es",
     "historial": [
       {
         "rol": "usuario",

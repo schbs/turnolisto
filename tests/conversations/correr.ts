@@ -12,6 +12,8 @@ import { configAgenda } from "@/config/clinica";
 import { RepositorioMemoria, type Repositorio } from "@/datos/repositorio";
 import { oraciones } from "@/agent/agente";
 import { aLocal } from "@/domain/formato";
+import { TEXTOS_BOT } from "@/i18n/bot";
+import { detectarIdioma, type Idioma } from "@/i18n/idioma";
 import { firmar } from "@/whatsapp/firma";
 import { MensajeroFake, type MensajeSaliente } from "@/whatsapp/mensajero";
 
@@ -30,6 +32,8 @@ export interface Espera {
   sin_respuesta?: boolean;
   ignorado?: "duplicado" | "pausado";
   interactivo?: "lista" | "botones";
+  /** Idioma en el que tiene que contestar el bot (también el botón de la lista). */
+  idioma?: Idioma;
 }
 
 export interface Caso {
@@ -166,6 +170,12 @@ function revisarPaso(n: number, e: Espera, r: ResultadoProceso): string[] {
   if (!e.sin_respuesta && !r.enviado) f.push(`paso ${n}: no respondió nada`);
   if (e.ignorado && r.ignorado !== e.ignorado) f.push(`paso ${n}: esperaba que se ignore por ${e.ignorado}`);
   if (e.interactivo && r.enviado?.interactivo?.tipo !== e.interactivo) f.push(`paso ${n}: esperaba un mensaje con ${e.interactivo}`);
+  if (e.idioma) {
+    const detectado = detectarIdioma(texto);
+    if (detectado && detectado !== e.idioma) f.push(`paso ${n}: esperaba la respuesta en ${e.idioma} y vino en ${detectado}: "${texto}"`);
+    const lista = r.enviado?.interactivo;
+    if (lista?.tipo === "lista" && lista.boton !== TEXTOS_BOT[e.idioma].verHorarios) f.push(`paso ${n}: el botón de la lista dice "${lista.boton}"`);
+  }
   const cantidad = oraciones(texto).length;
   if (cantidad > 3) f.push(`paso ${n}: la respuesta tiene ${cantidad} oraciones (máximo 3)`);
   return f;

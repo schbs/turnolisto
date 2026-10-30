@@ -1,5 +1,21 @@
 [
   {
+    "telefono": "+5492995550116",
+    "pacienteId": "pac-017",
+    "direccion": "entrante",
+    "tipo": "texto",
+    "texto": "Hi, could I talk to someone about the cost of a root canal before I book?",
+    "creadoEn": "2026-10-30T12:03:00.000Z"
+  },
+  {
+    "telefono": "+5492995550116",
+    "pacienteId": "pac-017",
+    "direccion": "saliente",
+    "tipo": "texto",
+    "texto": "Of course! I'm passing your message to the front desk and someone will write to you here shortly.",
+    "creadoEn": "2026-10-30T12:04:00.000Z"
+  },
+  {
     "telefono": "+5492995550104",
     "pacienteId": "pac-005",
     "direccion": "entrante",

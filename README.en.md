@@ -3,14 +3,15 @@
 **Books, reschedules and cancels appointments over WhatsApp, sends reminders 48 h, 24 h and 3 h before, and fills gaps from a waitlist.**
 
 ![Demo project — fictional data](https://img.shields.io/badge/demo%20project-fictional%20data-0E6863)
-![Tests](https://img.shields.io/badge/tests-97%2F97-1E6B3A)
+![Tests](https://img.shields.io/badge/tests-119%2F119-1E6B3A)
 ![E2E](https://img.shields.io/badge/e2e-11%2F11-1E6B3A)
 ![Lighthouse](https://img.shields.io/badge/lighthouse%20mobile-98%2F100%2F100%2F100-1E6B3A)
 
 [Versión en español](README.md)
 
 > **Demo project.** "Clínica Dental Confluencia" is a fictional brand and all data (patients, phone numbers, prices,
-> insurers) is made up. It is not a real client. The bot speaks Rioplatense Spanish (Argentina).
+> insurers) is made up. It is not a real client. The bot answers in Rioplatense Spanish (Argentina) or in English,
+> depending on how the patient writes, and the site and the panel have English versions (`/en`, `/en/panel`).
 
 ## The problem
 
@@ -34,8 +35,8 @@ A dental clinic loses appointments to last-minute cancellations and no-shows. Th
 
 | | |
 |---|---|
-| ![Landing](docs/capturas/01-landing.png) | ![Booking conversation](docs/capturas/04-conversacion-reserva.png) |
-| ![Panel: summary and handoffs](docs/capturas/02-panel-resumen.png) | ![Panel: weekly schedule](docs/capturas/03-panel-agenda.png) |
+| ![Landing](docs/capturas/en/01-landing.png) | ![Booking conversation](docs/capturas/en/04-conversacion-reserva.png) |
+| ![Panel: summary and handoffs](docs/capturas/en/02-panel-resumen.png) | ![Panel: weekly schedule](docs/capturas/en/03-panel-agenda.png) |
 
 ## Architecture
 
@@ -86,7 +87,7 @@ npm run probar-claves               # tests each key with a request that writes 
 
 1. **Database:** in Supabase, run `supabase/migrations/*.sql` in order (SQL editor), then `npm run db:seed`, which loads
    the fictional data and creates the demo front-desk user.
-2. **App:** `npm run dev`, then open http://localhost:3201 and http://localhost:3201/panel.
+2. **App:** `npm run dev`, then open http://localhost:3201/en and http://localhost:3201/en/panel (Spanish: `/` and `/panel`).
 3. **WhatsApp:** deploy the app (or use a tunnel) and point Meta's webhook to `/api/whatsapp` with `WHATSAPP_VERIFY_TOKEN`.
    In demo mode, `WHATSAPP_DESTINOS_PERMITIDOS` limits which numbers the bot talks to (who it messages and who it answers).
 4. **Reminders:** `npm run plantilla` creates the template in Meta. A scheduler calls `GET /api/cron/recordatorios` with
@@ -96,7 +97,7 @@ npm run probar-claves               # tests each key with a request that writes 
 |---|---|
 | `npm test` | Unit, domain and the 16 conversation tests |
 | `npm run test:e2e` | Playwright + axe on the production build |
-| `npm run lighthouse` | Mobile Lighthouse for `/` and `/panel` (median of 3) |
+| `npm run lighthouse` | Mobile Lighthouse for `/`, `/panel`, `/en` and `/en/panel` (median of 3) |
 | `npm run bench` | Conversations with live Gemini: latency, tokens and cost |
 | `npm run simular -- <case>` | One conversation through the webhook, no Meta (`--real` uses live Gemini) |
 | `npm run probar-rls` | Checks row-level security against Supabase |
@@ -108,13 +109,14 @@ Measured in this repo on 2026-10-30 (`docs/resultados/`).
 
 | What was measured | Result |
 |---|---|
-| Unit, domain and conversation tests (Vitest) | 97/97 |
-| Business conversations (recorded Gemini answers) | 16/16 |
+| Unit, domain and conversation tests (Vitest) | 119/119 |
+| Business conversations (recorded Gemini answers; 16 in Spanish, 2 in English) | 18/18 |
 | Conversations with live Gemini (`npm run bench`) | 14/14 |
-| E2E with Playwright (390 px phone and 1440 px desktop) | 11/11 |
-| axe WCAG 2.1 AA (`/`, `/panel/ingresar`, `/panel`, 2 sizes) | 0 violations |
+| E2E with Playwright (390 px phone and 1440 px desktop) | 13/13 |
+| axe WCAG 2.1 AA (`/`, `/panel/ingresar`, `/panel` and their `/en` versions) | 0 violations |
 | Mobile Lighthouse `/` (performance / accessibility / best practices / SEO) | 98 / 100 / 100 / 100 |
 | Mobile Lighthouse `/panel` (logged in) | 98 / 100 / 100 / 100 |
+| Mobile Lighthouse `/en` and `/en/panel` | 98 / 100 / 100 / 100 |
 | Agent latency per message, median (21 messages) | 2.2 s |
 | Latency without free-tier waits, median / p95 (18 messages) | 2.1 s / 7.7 s |
 | Model calls per message | 2.05 |
@@ -152,6 +154,7 @@ off-topic question, asking for a person, emergency, duplicate Meta delivery, Sun
 - With Supabase in us-west-2 each message adds 2.5–4 s of queries. Next: batch queries or a closer region.
 - Tested with a webhook simulator that signs exactly like Meta. A test with the real number on a public URL is still pending.
 - The reminder job is ready, but nothing calls it automatically yet (n8n, an external cron or Vercel Pro).
+- Reminders (a Meta template) and waitlist offers are still sent in Spanish only; an English template is next.
 - Still missing: an email to the front desk on handoff (today it shows in the panel queue) and a permanent WhatsApp token.
 
 ## Author

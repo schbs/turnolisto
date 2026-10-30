@@ -1,5 +1,5 @@
 // Clientes de Supabase. El de servicio (clave secreta) saltea RLS: solo para el bot, los jobs y los scripts,
-// nunca en el navegador. El panel usa el de sesión (src/app/panel/supabase-sesion.ts), que sí pasa por RLS.
+// nunca en el navegador. El panel usa el de sesión (src/panel/supabase-sesion.ts), que sí pasa por RLS.
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 
 let servicio: SupabaseClient | null = null;

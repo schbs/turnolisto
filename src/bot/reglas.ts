@@ -11,6 +11,13 @@ const URGENCIA = [
   /\bgolpe\b|me (rompi|parti|cai)/,
   /\burgen(te|cia)\b/,
   /\bfiebre\b/,
+  // Inglés
+  /\b(severe|unbearable|excruciating|terrible|awful) (pain|toothache|ache)\b/,
+  /\bbleed(ing|s)?\b/,
+  /\bswollen\b|\bswelling\b/,
+  /\bemergency\b|\burgent\b/,
+  /\bfever\b/,
+  /\b(broke|cracked|chipped|knocked out) (a|my) tooth\b/,
 ];
 
 const HUMANO = [
@@ -18,6 +25,9 @@ const HUMANO = [
   /\b(humano|operador|persona real)\b/,
   /atencion (humana|personal)/,
   /pasame con/,
+  // Inglés
+  /\b(talk|speak|chat) (to|with) (a person|someone|somebody|a human|a real person|the front desk|reception|an agent|staff)\b/,
+  /\bhuman\b|\breal person\b/,
 ];
 
 export function esUrgencia(texto: string): boolean {

@@ -1,5 +1,5 @@
 // Genera los datos ficticios de la demo: 3 profesionales, 8 prestaciones, 40 pacientes, 60 turnos, una lista de espera
-// y 3 derivaciones a recepción con sus mensajes (para el panel).
+// y 4 derivaciones a recepción (una de un paciente que escribe en inglés) con sus mensajes (para el panel).
 // Es determinista (semilla fija): correrlo dos veces da los mismos archivos.
 // Salida: data/seed/*.json y supabase/seed.sql.
 import fs from "node:fs";
@@ -134,7 +134,21 @@ const listaEspera: EntradaEspera[] = Array.from({ length: 6 }, (_, i) => {
 const enLocal = (fechaHora: string) => local(fechaHora).toUTC().toISO()!;
 const conversacionesDemo = [
   {
+    // Un paciente que escribe en inglés: el bot le contesta en inglés y recepción ve su mensaje tal cual.
+    paciente: pacientes[16],
+    idioma: "en",
+    motivo: "pedido_del_paciente",
+    estado: "pendiente",
+    creadoEn: enLocal("2026-10-30 09:05"),
+    resumen: "Wants to talk to someone about the cost of a root canal before booking.",
+    mensajes: [
+      ["entrante", "Hi, could I talk to someone about the cost of a root canal before I book?"],
+      ["saliente", "Of course! I'm passing your message to the front desk and someone will write to you here shortly."],
+    ],
+  },
+  {
     paciente: pacientes[4],
+    idioma: "es",
     motivo: "otro",
     estado: "pendiente",
     creadoEn: enLocal("2026-10-30 10:12"),
@@ -146,6 +160,7 @@ const conversacionesDemo = [
   },
   {
     paciente: pacientes[8],
+    idioma: "es",
     motivo: "pedido_del_paciente",
     estado: "pendiente",
     creadoEn: enLocal("2026-10-30 11:40"),
@@ -157,6 +172,7 @@ const conversacionesDemo = [
   },
   {
     paciente: pacientes[12],
+    idioma: "es",
     motivo: "urgencia",
     estado: "resuelto",
     creadoEn: enLocal("2026-10-29 19:05"),
@@ -189,6 +205,7 @@ const mensajes = conversacionesDemo.flatMap((c) =>
 const conversaciones = conversacionesDemo.map((c) => ({
   telefono: c.paciente.telefono,
   pausado: c.estado === "pendiente",
+  idioma: c.idioma,
   historial: c.mensajes.map(([direccion, texto]) => ({ rol: direccion === "entrante" ? "usuario" : "asistente", texto })),
 }));
 

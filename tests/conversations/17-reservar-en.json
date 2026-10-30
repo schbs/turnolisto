@@ -1,0 +1,45 @@
+{
+  "nombre": "reservar-en",
+  "descripcion": "Paciente registrado escribe en inglés, pide una limpieza el jueves a la tarde y elige de la lista: todo en inglés",
+  "telefono": "5492995550102",
+  "nombre_perfil": "Tomás",
+  "ahora": "2026-11-02 08:00",
+  "pasos": [
+    {
+      "usuario": {
+        "texto": "Hi! I'd like to book a cleaning on Thursday afternoon"
+      },
+      "espera": {
+        "herramientas": [
+          "buscar_slots"
+        ],
+        "prohibidas": [
+          "reservar_turno"
+        ],
+        "interactivo": "lista",
+        "idioma": "en"
+      }
+    },
+    {
+      "usuario": {
+        "boton": "slot|limpieza|prof-ibanez|2026-11-05T15:00",
+        "titulo": "15:00 · Dra. Ibáñez"
+      },
+      "espera": {
+        "herramientas": [
+          "reservar_turno"
+        ],
+        "idioma": "en"
+      }
+    }
+  ],
+  "al_final": {
+    "turno_nuevo": {
+      "prestacion": "limpieza",
+      "inicio": "2026-11-05T15:00",
+      "profesional": "prof-ibanez"
+    },
+    "eventos_calendario": 1,
+    "handoffs": 0
+  }
+}

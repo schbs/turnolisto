@@ -1,5 +1,13 @@
 [
   {
+    "telefono": "+5492995550116",
+    "pacienteId": "pac-017",
+    "motivo": "pedido_del_paciente",
+    "resumen": "Wants to talk to someone about the cost of a root canal before booking.",
+    "estado": "pendiente",
+    "creadoEn": "2026-10-30T12:05:00.000Z"
+  },
+  {
     "telefono": "+5492995550104",
     "pacienteId": "pac-005",
     "motivo": "otro",

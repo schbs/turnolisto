@@ -3,14 +3,15 @@
 **Da, cambia y cancela turnos por WhatsApp, recuerda 48 h, 24 h y 3 h antes y llena los huecos con la lista de espera.**
 
 ![Demo project — fictional data](https://img.shields.io/badge/demo%20project-fictional%20data-0E6863)
-![Tests](https://img.shields.io/badge/tests-97%2F97-1E6B3A)
+![Tests](https://img.shields.io/badge/tests-119%2F119-1E6B3A)
 ![E2E](https://img.shields.io/badge/e2e-11%2F11-1E6B3A)
 ![Lighthouse](https://img.shields.io/badge/lighthouse%20m%C3%B3vil-98%2F100%2F100%2F100-1E6B3A)
 
 [English version](README.en.md)
 
 > **Proyecto de demostración.** "Clínica Dental Confluencia" es una marca ficticia y todos los datos (pacientes, teléfonos,
-> precios, obras sociales) son inventados. No es un cliente real.
+> precios, obras sociales) son inventados. No es un cliente real. El bot contesta en español o en inglés, según
+> cómo escriba el paciente, y el sitio y el panel tienen versión en inglés (`/en`, `/en/panel`).
 
 ## El problema
 
@@ -96,7 +97,7 @@ npm run probar-claves               # prueba cada clave con un pedido que no esc
 |---|---|
 | `npm test` | Tests de unidad, dominio y las 16 conversaciones |
 | `npm run test:e2e` | Playwright + axe sobre el build de producción |
-| `npm run lighthouse` | Lighthouse móvil de `/` y `/panel` (mediana de 3) |
+| `npm run lighthouse` | Lighthouse móvil de `/`, `/panel`, `/en` y `/en/panel` (mediana de 3) |
 | `npm run bench` | Las conversaciones con Gemini en vivo: latencia, tokens y costo |
 | `npm run simular -- <caso>` | Una conversación por el webhook, sin Meta (`--real` usa Gemini en vivo) |
 | `npm run probar-rls` | Comprueba la seguridad por filas contra Supabase |
@@ -108,13 +109,14 @@ Medido en este repo el 30/10/2026 (`docs/resultados/`).
 
 | Qué se midió | Resultado |
 |---|---|
-| Tests de unidad, dominio y conversaciones (Vitest) | 97/97 |
-| Conversaciones de negocio (respuestas de Gemini grabadas) | 16/16 |
+| Tests de unidad, dominio y conversaciones (Vitest) | 119/119 |
+| Conversaciones de negocio (respuestas de Gemini grabadas; 16 en español y 2 en inglés) | 18/18 |
 | Conversaciones con Gemini en vivo (`npm run bench`) | 14/14 |
-| E2E con Playwright (celular 390 px y compu 1440 px) | 11/11 |
-| axe WCAG 2.1 AA (`/`, `/panel/ingresar`, `/panel`, en 2 tamaños) | 0 violaciones |
+| E2E con Playwright (celular 390 px y compu 1440 px) | 13/13 |
+| axe WCAG 2.1 AA (`/`, `/panel/ingresar`, `/panel` y sus versiones `/en`) | 0 violaciones |
 | Lighthouse móvil `/` (rendimiento / accesibilidad / buenas prácticas / SEO) | 98 / 100 / 100 / 100 |
 | Lighthouse móvil `/panel` (con sesión) | 98 / 100 / 100 / 100 |
+| Lighthouse móvil `/en` y `/en/panel` | 98 / 100 / 100 / 100 |
 | Latencia del agente por mensaje, mediana (21 mensajes) | 2,2 s |
 | Latencia sin las esperas del plan gratis, mediana / p95 (18 mensajes) | 2,1 s / 7,7 s |
 | Llamadas al modelo por mensaje | 2,05 |
@@ -153,6 +155,7 @@ pregunta fuera de tema, pedir una persona, urgencia, mensaje duplicado de Meta, 
 - Con Supabase en us-west-2 cada mensaje suma 2,5 a 4 s de consultas. Próximo paso: juntar consultas o usar una región más cercana.
 - Probado con un simulador de webhooks firmados igual que Meta. Falta la prueba con el número real en una URL pública.
 - El job de recordatorios está listo, pero nada lo llama solo todavía (n8n, cron externo o Vercel Pro).
+- Los recordatorios (plantilla de Meta) y las ofertas de la lista de espera salen solo en español; falta una plantilla en inglés.
 - Falta el aviso por mail a recepción cuando se deriva (hoy queda en la cola del panel) y un token permanente de WhatsApp.
 
 ## Autoría

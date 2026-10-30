@@ -13,6 +13,7 @@ export interface TurnoPanel {
   estado: EstadoTurno;
   paciente: string;
   profesional: string;
+  prestacionId: string;
   prestacion: string;
 }
 
@@ -42,7 +43,7 @@ export async function cargarPanel(db: Cliente, lunes: DateTime) {
   const [semana, proximos, cancelados, recuperados, pendientes, derivadas7] = await Promise.all([
     db
       .from("turnos")
-      .select("id, inicio, estado, pacientes(nombre), profesionales(nombre), prestaciones(nombre)")
+      .select("id, inicio, estado, pacientes(nombre), profesionales(nombre), prestaciones(id, nombre)")
       .gte("inicio", desde)
       .lt("inicio", hasta)
       .order("inicio"),
@@ -70,6 +71,7 @@ export async function cargarPanel(db: Cliente, lunes: DateTime) {
     estado: t.estado as EstadoTurno,
     paciente: nombre(t.pacientes),
     profesional: nombre(t.profesionales),
+    prestacionId: (t.prestaciones as { id?: string } | null)?.id ?? "",
     prestacion: nombre(t.prestaciones),
   }));
 

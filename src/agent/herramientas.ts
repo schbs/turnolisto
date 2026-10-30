@@ -6,8 +6,10 @@ import clinica from "../../data/clinica.json";
 import type { Calendario } from "@/calendario/calendario";
 import type { MotivoHandoff, Paciente, Repositorio } from "@/datos/repositorio";
 import { cancelar, reprogramar, reservar, slotsDisponibles } from "@/domain/agenda";
-import { aLocal, desdeLocal, fechaLegible } from "@/domain/formato";
+import { aLocal, desdeLocal, diaLegible, fechaLegible } from "@/domain/formato";
 import type { ConfigAgenda, ErrorAgenda, Prestacion, Profesional, Turno } from "@/domain/tipos";
+import { nombrePrestacion, TEXTOS_BOT } from "@/i18n/bot";
+import type { Idioma } from "@/i18n/idioma";
 import type { Interactivo, Mensajero } from "@/whatsapp/mensajero";
 import type { DeclaracionHerramienta } from "./modelo";
 
@@ -34,6 +36,8 @@ export interface ContextoHerramientas {
   telefono: string;
   paciente: Paciente | null;
   herramientasUsadas: string[];
+  /** Idioma del paciente: define los textos fijos (botón y filas de la lista). Sin dato: español. */
+  idioma?: Idioma;
   sugerencia?: Interactivo;
   handoff?: { motivo: MotivoHandoff; resumen: string };
   reprogramado?: boolean;
@@ -210,15 +214,16 @@ const ejecutores: Record<Exclude<NombreHerramienta, "responder">, Ejecutor> = {
     const opciones = opcionesDelDia(ctx, agenda, { prestacion, fecha: a.fecha, profesionales, franja, horaPreferida: a.hora_preferida });
 
     if (opciones.length) {
+      const idioma = ctx.idioma ?? "es";
       const filas = opciones.flatMap((o) =>
         o.horarios.map((h) => ({
           id: `slot|${a.prestacion_id}|${o.profesional_id}|${a.fecha}T${h}`,
           // El título (≤ 24) distingue la fila: hora y apellido del profesional. "09:00 · Dra. Ferreyra"
           titulo: `${h} · ${o.profesional.split(" ").filter((_, i, p) => i === 0 || i === p.length - 1).join(" ")}`,
-          descripcion: `${dia.setLocale("es-AR").toFormat("cccc d/M")} · ${prestacion.nombre}`,
+          descripcion: `${diaLegible(dia.toISO()!, config.zona, idioma)} · ${nombrePrestacion(prestacion.id, prestacion.nombre, idioma)}`,
         })),
       );
-      ctx.sugerencia = { tipo: "lista", boton: "Ver horarios", filas: filas.slice(0, 10) };
+      ctx.sugerencia = { tipo: "lista", boton: TEXTOS_BOT[idioma].verHorarios, filas: filas.slice(0, 10) };
       return { ok: true, dia: dia.setLocale("es-AR").toFormat("cccc d/M"), opciones };
     }
 

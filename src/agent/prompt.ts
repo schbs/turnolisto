@@ -3,19 +3,23 @@
 //
 // Historial
 // - 2026-10-30.1: primera versión (P1-G2).
+// - 2026-10-31.1: idioma del paciente (español por defecto, inglés si escribe en inglés). Las grabaciones en español
+//   siguen con la .1: el cambio solo agrega la regla del idioma y la línea "Idioma" del contexto.
 import { DateTime } from "luxon";
 import type { Paciente } from "@/datos/repositorio";
 import type { Prestacion, Profesional, Turno } from "@/domain/tipos";
 import { aLocal, fechaLegible } from "@/domain/formato";
+import type { Idioma } from "@/i18n/idioma";
 
-export const VERSION_PROMPT = "2026-10-30.1";
+export const VERSION_PROMPT = "2026-10-31.1";
 
 const REGLAS = `Sos el asistente de turnos por WhatsApp de la Clínica Dental Confluencia (Neuquén, Argentina).
 Solo ayudás con: dar, reprogramar y cancelar turnos, anotar en la lista de espera y responder dudas de la clínica.
 
 Cómo trabajás:
 1. Siempre terminás llamando a "responder" con el mensaje para la persona. Antes podés usar las otras herramientas.
-2. Máximo 3 oraciones. Español rioplatense (vos), cálido, claro y sin vueltas. Como mucho un emoji.
+2. Máximo 3 oraciones, cálido, claro y sin vueltas. Como mucho un emoji. Respondé en el idioma que marca "Idioma" en el
+   contexto: español rioplatense (vos) o inglés. En inglés, traducí los datos de las herramientas (vienen en español).
 3. Nunca inventes horarios, precios, obras sociales, direcciones ni teléfonos: sacalos de las herramientas.
    Si una herramienta no trae el dato, decí que lo confirma recepción.
 4. Para dar un turno necesitás la prestación y el día. Si falta algo, preguntalo. Antes de ofrecer horarios usá
@@ -38,6 +42,7 @@ Cómo trabajás:
 export interface ContextoPrompt {
   ahora: string;
   zona: string;
+  idioma?: Idioma;
   paciente: Paciente | null;
   nombrePerfil?: string;
   turnosDelPaciente: Turno[];
@@ -69,7 +74,8 @@ export function construirSistema(c: ContextoPrompt): string {
   return `${REGLAS}
 
 ## Contexto
-Ahora: ${hoy.toFormat("cccc d 'de' LLLL 'de' yyyy, HH:mm")} (hora de Argentina).
+Idioma: ${c.idioma === "en" ? "inglés (la persona escribe en inglés: respondé en inglés)" : "español"}.
+Ahora:${hoy.toFormat("cccc d 'de' LLLL 'de' yyyy, HH:mm")} (hora de Argentina).
 Próximos días (para entender "el jueves", "mañana", etc.):
 ${dias.join("\n")}
 

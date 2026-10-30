@@ -17,11 +17,11 @@ listas, plantillas) · Next.js 16 + TypeScript · Supabase (Postgres, RLS, Auth)
 testing de agentes con conversaciones grabadas · Playwright, axe y Lighthouse.
 
 ## Métricas medidas (30/10/2026)
-- **16/16 conversaciones de negocio** en verde (y 14/14 corridas en vivo contra Gemini).
+- **18/18 conversaciones de negocio** (16 en español y 2 en inglés) en verde (y 14/14 corridas en vivo contra Gemini).
 - **Lighthouse móvil 98/100/100/100** en la landing y en el panel; **0 violaciones de accesibilidad** (axe, WCAG 2.1 AA).
 - **Latencia mediana del agente: 2,2 s por mensaje** (21 mensajes, 2,05 llamadas al modelo por mensaje).
 - **Costo estimado: USD 0,003 por conversación** con Gemini 3.5 Flash-Lite en plan pago.
-- **11/11 e2e** (celular y compu) y **97/97 tests** de unidad, dominio y conversación.
+- **13/13 e2e** (celular y compu) y **119/119 tests** de unidad, dominio y conversación.
 
 ## Lo que encontraron las pruebas con IA real (y se corrigió)
 - Un paciente que ya había reservado dijo "confirmámelo" y el modelo le reservó **otro turno a la misma hora** con otra

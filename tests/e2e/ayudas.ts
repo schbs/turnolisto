@@ -2,15 +2,16 @@ import AxeBuilder from "@axe-core/playwright";
 import { expect, type Page } from "@playwright/test";
 
 /** Ingresa con el usuario demo de recepción (credenciales de .env.local, creadas por npm run db:seed). */
-export async function ingresar(page: Page) {
+export async function ingresar(page: Page, idioma: "es" | "en" = "es") {
   const email = process.env.PANEL_DEMO_EMAIL;
   const password = process.env.PANEL_DEMO_PASSWORD;
   if (!email || !password) throw new Error("Faltan PANEL_DEMO_EMAIL / PANEL_DEMO_PASSWORD: correr npm run db:seed");
-  await page.goto("/panel/ingresar");
+  const en = idioma === "en";
+  await page.goto(en ? "/en/panel/ingresar" : "/panel/ingresar");
   await page.getByLabel("Email").fill(email);
-  await page.getByLabel("Contraseña").fill(password);
-  await page.getByRole("button", { name: "Ingresar" }).click();
-  await expect(page.getByRole("heading", { name: "Agenda de la semana" })).toBeVisible();
+  await page.getByLabel(en ? "Password" : "Contraseña").fill(password);
+  await page.getByRole("button", { name: en ? "Sign in" : "Ingresar" }).click();
+  await expect(page.getByRole("heading", { name: en ? "This week's schedule" : "Agenda de la semana" })).toBeVisible();
 }
 
 /** axe con reglas WCAG 2.1 AA: no tiene que haber violaciones serias ni críticas. Devuelve el resumen. */

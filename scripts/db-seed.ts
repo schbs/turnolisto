@@ -117,7 +117,7 @@ async function main() {
     "mensajes",
     db.from("mensajes").insert(mensajes.map((m) => ({ telefono: m.telefono, paciente_id: m.pacienteId, direccion: m.direccion, tipo: m.tipo, texto: m.texto, creado_en: m.creadoEn }))),
   );
-  await ok("conversaciones", db.from("conversaciones").insert(conversaciones.map((c) => ({ telefono: c.telefono, pausado: c.pausado, historial: c.historial }))));
+  await ok("conversaciones", db.from("conversaciones").insert(conversaciones.map((c) => ({ telefono: c.telefono, pausado: c.pausado, idioma: c.idioma, historial: c.historial }))));
 
   // Usuario demo de recepción (Supabase Auth) y su alta como personal.
   if (!process.env.PANEL_DEMO_EMAIL) guardarEnEnv("PANEL_DEMO_EMAIL", "recepcion.demo@example.com");

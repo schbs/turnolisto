@@ -30,7 +30,6 @@ día contestando "¿tienen turno el jueves?" por WhatsApp, y los huecos que se l
 
 ## Demo
 
-- Video: _pendiente de grabar_ (guion en [docs/video/guion.md](docs/video/guion.md)).
 - Probalo sin Meta ni teléfono: `npm run simular -- reservar` manda la conversación al webhook firmado igual que Meta.
 
 | | |

@@ -30,7 +30,6 @@ A dental clinic loses appointments to last-minute cancellations and no-shows. Th
 
 ## Demo
 
-- Video: _to be recorded_ (script in [docs/video/guion.md](docs/video/guion.md), in Spanish).
 - Try it without Meta or a phone: `npm run simular -- reservar` sends the conversation to the webhook, signed exactly like Meta signs it.
 
 | | |
